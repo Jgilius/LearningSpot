@@ -1,9 +1,4 @@
-@desktop:1200px;
-@laptop:1024px;
-@tablet:768px;
-@phone:480px; 
-
-* {
+ * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
@@ -16,8 +11,6 @@ main {
     align-items: center;
     justify-content: center;
 }
-
-
 
 .back_panel{
     min-height: 97vh;
@@ -92,3 +85,10 @@ main {
     padding: 1rem;
     
 }
+
+@media screen and (max-width: 1024px){
+    main{ 
+    background: black;
+    }
+}
+
