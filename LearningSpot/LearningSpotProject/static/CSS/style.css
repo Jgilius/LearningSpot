@@ -25,4 +25,5 @@ main {
     border: solid;
     border-color: #65dfc9;
     border: 0.1rem;
+    display: flex;
 }
