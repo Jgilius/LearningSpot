@@ -6,5 +6,23 @@
 
 main {
     min-height: 100vh;
-    background: linear-gradient(to right top,#65dfc9, #6cdbeb)
+    background: linear-gradient(to right top,#65dfc9, #6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back_panel{
+    background: white;
+    min-height: 97vh;
+    width:97%;
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255, 255, 255, 0.7), 
+        rgba(255, 255, 255, 0.3)
+        );
+    border-radius: 2rem;
+    border: solid;
+    border-color: #65dfc9;
+    border: 0.1rem;
 }
