@@ -101,7 +101,7 @@ header{
         }
 
         .learning_intentions_module{
-            padding: 3rem;
+            padding: 2rem;
         }
 
         .learning_intentions_header{
@@ -111,13 +111,16 @@ header{
         }
         
         .learning_intention{
-            padding: 0.75rem;
+            padding: 0.5rem;
             font-size: 12px;
             -webkit-text-size-adjust: auto;
+            word-wrap: break-all;
+            width: 300px;
+            text-align: center;
         }
 
         .confidence_level_module{
-            padding: 3rem;
+            padding: 2rem;
         }
 
         .confidence_level_header{
@@ -127,11 +130,52 @@ header{
         }
 
         .confidence_level{
-        
+            padding: 0.75rem;
+        }    
+}
+
+/*Laptop 1366x768px */
+@media screen   
+    and (max-device-width: 1366px) 
+    and (min-device-width: 1024px) 
+    and (max-device-height: 768px) 
+    and (min-device-height: 768px){
+        .learning_intentions_section{ 
+            top: 8vh;
+            left: 2vh;
         }
 
+        .learning_intentions_module{
+            padding: 1rem;
+        }
 
+        .learning_intentions_header{
+            bottom: 0rem;
+            font-size: 16px;
+            -webkit-text-size-adjust: auto;
+        }
+        
+        .learning_intention{
+            padding: 0.5rem;
+            font-size: 10px;
+            -webkit-text-size-adjust: auto;
+            word-wrap: break-all;
+            width: 200px;
+            text-align: center;
+        }
 
-    
+        .confidence_level_module{
+            padding: 1rem;
+        }
+
+        .confidence_level_header{
+            bottom: 0rem;
+            font-size: 16px;
+            -webkit-text-size-adjust: auto;
+        }
+
+        .confidence_level{
+            padding: 0.5rem;
+        }    
 }
 
