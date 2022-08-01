@@ -27,8 +27,7 @@ main {
         );
     border-radius: 2rem;
     position: absolute;
-    top: 3%;
-    Right: 60%;  
+     
 }
 
 .learning_intentions_module{
@@ -36,10 +35,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: left;
-    padding: 1rem;
     justify-content: space-between;
 }
-
 
 .learning_intentions_header{
     position: relative;
@@ -56,11 +53,11 @@ main {
         rgba(255,255,255,0.5),
         rgba(255,255,255,0.2)
         );
-    margin: 1rem 0rem;
+    margin: 0.5rem 0rem;
     border-radius: 1rem;
-    padding: 1rem;
     box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
 }
+
 
 .confidence_level_module{
     display: flex;
@@ -79,16 +76,62 @@ main {
 .confidence_level{
     display: flex;
     justify-content: space-between;
-   
-    margin: 1rem 0rem;
+    margin: 0.5rem 0rem;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
+    background: red;
     
 }
 
-@media screen and (max-width: 1024px){
-    main{ 
-    background: black;
-    }
+header{
+    min-height: 5vh;
+    background: linear-gradient(to right top,#65dfc962, #6cdaeb5c);
+    text-align: center;
+}
+
+/*Desktop 1920 x 1080 */
+@media screen   
+    and (max-device-width: 1920px) 
+    and (min-device-width: 1366px) 
+    and (max-device-height: 1080px) 
+    and (min-device-height: 768px){
+        .learning_intentions_section{ 
+            top: 8vh;
+            left: 3vh;
+        }
+
+        .learning_intentions_module{
+            padding: 3rem;
+        }
+
+        .learning_intentions_header{
+            bottom: 1rem;
+            font-size: 18px;
+            -webkit-text-size-adjust: auto;
+        }
+        
+        .learning_intention{
+            padding: 0.75rem;
+            font-size: 12px;
+            -webkit-text-size-adjust: auto;
+        }
+
+        .confidence_level_module{
+
+        }
+
+        .confidence_level_header{
+            bottom: 1rem;
+            font-size: 18px;
+            -webkit-text-size-adjust: auto;
+        }
+
+        .confidence_level{
+        
+        }
+
+
+
+    
 }
 
