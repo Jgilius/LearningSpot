@@ -5,6 +5,7 @@
 }
 
 main {
+    font-family: 'Poppins', sans-serif, thin;
     min-height: 100vh;
     background: linear-gradient(to right top,#65dfc9, #6cdbeb);
     display: flex;
@@ -22,11 +23,15 @@ main {
     background: white;
     background: linear-gradient(
         to right bottom, 
-        rgba(255, 255, 255, 0.4), 
-        rgba(255, 255, 255, 0.2)
+        rgba(16, 217, 224, 0.4), 
+        rgba(16, 179, 255, 0.2)
         );
     border-radius: 2rem;
     position: absolute;
+    backdrop-filter: blur(30rem);
+    border: 1px solid;
+    border-color: black;
+   
 }
 
 .learning_intentions_module{
@@ -55,6 +60,8 @@ main {
     margin: 0.5rem 0rem;
     border-radius: 1rem;
     box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
+    
+    
 }
 
 .confidence_level_module{
@@ -89,12 +96,12 @@ header{
     text-align: center;
 }
 
-/*Desktop 1920 x 1080 */
+/* Desktop 1920px x 1080px */
 @media screen   
     and (max-device-width: 1920px) 
-    and (min-device-width: 1366px) 
+    and (min-device-width: 1367px) 
     and (max-device-height: 1080px) 
-    and (min-device-height: 768px){
+    and (min-device-height: 769px){
         .learning_intentions_section{ 
             top: 8vh;
             left: 3vh;
@@ -106,7 +113,7 @@ header{
 
         .learning_intentions_header{
             bottom: 1rem;
-            font-size: 18px;
+            font-size: 16px;
             -webkit-text-size-adjust: auto;
         }
         
@@ -125,7 +132,7 @@ header{
 
         .confidence_level_header{
             bottom: 1rem;
-            font-size: 18px;
+            font-size: 16px;
             -webkit-text-size-adjust: auto;
         }
 
@@ -134,12 +141,12 @@ header{
         }    
 }
 
-/*Laptop 1366x768px */
+/* Laptop 1366px x 768px */
 @media screen   
     and (max-device-width: 1366px) 
-    and (min-device-width: 1024px) 
-    and (max-device-height: 768px) 
-    and (min-device-height: 768px){
+    and (min-device-width: 1025px) 
+    and (max-device-height: 769px) 
+    and (min-device-height: 769px){
         .learning_intentions_section{ 
             top: 8vh;
             left: 2vh;
@@ -153,11 +160,13 @@ header{
             bottom: 0rem;
             font-size: 16px;
             -webkit-text-size-adjust: auto;
+            word-break: keep-all;
+
         }
         
         .learning_intention{
             padding: 0.5rem;
-            font-size: 10px;
+            font-size: 12px;
             -webkit-text-size-adjust: auto;
             word-wrap: break-all;
             width: 200px;
@@ -172,6 +181,7 @@ header{
             bottom: 0rem;
             font-size: 16px;
             -webkit-text-size-adjust: auto;
+            word-break: keep-all;
         }
 
         .confidence_level{
@@ -179,3 +189,103 @@ header{
         }    
 }
 
+/*Tablet 1024px x 768px */
+@media screen   
+    and (max-device-width: 1024px) 
+    and (min-device-width: 1024px) 
+    and (max-device-height: 769px) 
+    and (min-device-height: 769px){
+        .learning_intentions_section{ 
+            top: 8vh;
+            left: 2vh;
+        }
+
+        .learning_intentions_module{
+            padding: 0.5rem;
+        }
+
+        .learning_intentions_header{
+            bottom: 0rem;
+            font-size: 10px;
+            -webkit-text-size-adjust: auto;
+            word-break: keep-all;
+
+        }
+        
+        .learning_intention{
+            padding: 0.5rem;
+            font-size: 6px;
+            -webkit-text-size-adjust: auto;
+            word-wrap: break-all;
+            width: 135px;
+            text-align: center;
+        }
+
+        .confidence_level_module{
+            padding: 0.5rem;
+        }
+
+        .confidence_level_header{
+            bottom: 0rem;
+            font-size: 10px;
+            -webkit-text-size-adjust: auto;
+            word-break: keep-all;
+        }
+
+        .confidence_level{
+            padding: 0.5rem;
+            width: 100px;
+        }    
+}
+
+/*Mobile 414px x 896px */
+@media screen   
+    and (max-device-width: 414px) 
+    and (min-device-width: 414px) 
+    and (max-device-height: 896px) 
+    and (min-device-height: 896px){
+        .learning_intentions_section{ 
+            top: 8vh;
+            left: 4vh;
+            position: center;
+        }
+
+        .learning_intentions_module{
+            padding: 0.5rem;
+        }
+
+        .learning_intentions_header{
+            bottom: 0rem;
+            font-size: 8px;
+            -webkit-text-size-adjust: auto;
+            word-break: keep-all;
+
+        }
+        
+        .learning_intention{
+            padding: 0.5rem;
+            font-size: 6px;
+            -webkit-text-size-adjust: auto;
+            word-wrap: break-all;
+            width: 135px;
+            text-align: center;
+        }
+
+        .confidence_level_module{
+            padding: 0.5rem;
+            right: 3vh;
+        }
+
+        .confidence_level_header{
+            bottom: 0rem;
+            font-size: 8px;
+            -webkit-text-size-adjust: auto;
+            word-break: keep-all;
+            
+        }
+
+        .confidence_level{
+            padding: 0.5rem;
+            width: 100px;
+        }    
+}
