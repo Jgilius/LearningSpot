@@ -27,7 +27,6 @@ main {
         );
     border-radius: 2rem;
     position: absolute;
-     
 }
 
 .learning_intentions_module{
@@ -58,7 +57,6 @@ main {
     box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
 }
 
-
 .confidence_level_module{
     display: flex;
     flex-direction: column;
@@ -68,6 +66,7 @@ main {
 }
 
 .confidence_level_header{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,8 +78,9 @@ main {
     margin: 0.5rem 0rem;
     border-radius: 1rem;
     padding: 0.5rem;
-    background: red;
-    
+    margin: 0.5rem 0rem;
+    border-radius: 1rem;
+    box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
 }
 
 header{
@@ -117,7 +117,7 @@ header{
         }
 
         .confidence_level_module{
-
+            padding: 3rem;
         }
 
         .confidence_level_header{
