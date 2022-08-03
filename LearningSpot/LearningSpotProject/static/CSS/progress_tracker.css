@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.progress_tracker {
+    display: flex;
+    background: white;
+    background: linear-gradient(to right bottom,
+            rgba(16, 217, 224, 0.4),
+            rgba(16, 179, 255, 0.2));
+    border-radius: 2rem;
+    backdrop-filter: blur(30rem);
+    border: 1px solid;
+    border-color: black;
+}

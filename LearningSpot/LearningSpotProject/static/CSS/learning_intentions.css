@@ -4,10 +4,16 @@
     box-sizing: border-box;
 }
 
+header {
+    min-height: 5vh;
+    background: linear-gradient(to right top, #65dfc962, #6cdaeb5c);
+    text-align: center;
+}
 .container {
     min-height: 97vh;
-    width: 97%
+    width: 97%;
 }
+
 main {
     font-family: 'Poppins', sans-serif, thin;
     min-height: 100vh;
@@ -18,7 +24,7 @@ main {
 }
 
 
-.learning_intentions_section{
+.learning_intentions_section {
     display: flex;
     background: white;
     background: linear-gradient(
@@ -27,7 +33,6 @@ main {
         rgba(16, 179, 255, 0.2)
         );
     border-radius: 2rem;
-    position: absolute;
     backdrop-filter: blur(30rem);
     border: 1px solid;
     border-color: black;
@@ -90,11 +95,7 @@ main {
     box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
 }
 
-header{
-    min-height: 5vh;
-    background: linear-gradient(to right top,#65dfc962, #6cdaeb5c);
-    text-align: center;
-}
+
 
 /* Desktop 1920px x 1080px */
 @media screen   
@@ -104,14 +105,12 @@ header{
     and (min-device-height: 769px){
         
         .learning_intentions_section{ 
-            position: absolute;
-                width: 650px;
-                height: 445px;
+            float: left;
+                width: 33.33%px;
+                height: 40%;
                 z-index: 15;
                 top: 7.5%;
-                left: 6.5%;
                 margin: 0px -100px 0px -100px;
-                min-width: 650px;
         }
 
         .learning_intentions_module{
