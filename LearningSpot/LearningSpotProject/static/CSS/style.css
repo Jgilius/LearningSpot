@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.container {
+    min-height: 97vh;
+    width: 97%
+}
 main {
     font-family: 'Poppins', sans-serif, thin;
     min-height: 100vh;
@@ -13,10 +17,6 @@ main {
     justify-content: center;
 }
 
-.back_panel{
-    min-height: 97vh;
-    width:97%;
-}
 
 .learning_intentions_section{
     display: flex;
@@ -102,9 +102,16 @@ header{
     and (min-device-width: 1367px) 
     and (max-device-height: 1080px) 
     and (min-device-height: 769px){
+        
         .learning_intentions_section{ 
-            top: 8vh;
-            left: 3vh;
+            position: absolute;
+                width: 650px;
+                height: 445px;
+                z-index: 15;
+                top: 7.5%;
+                left: 6.5%;
+                margin: 0px -100px 0px -100px;
+                min-width: 650px;
         }
 
         .learning_intentions_module{
@@ -148,8 +155,13 @@ header{
     and (max-device-height: 769px) 
     and (min-device-height: 769px){
         .learning_intentions_section{ 
-            top: 8vh;
-            left: 2vh;
+            position: absolute;
+                width: 650px;
+                height: 445px;
+                z-index: 15;
+                top: 7.5%;
+                left: 6.5%;
+                margin: 0px -100px 0px -100px;
         }
 
         .learning_intentions_module{
@@ -196,8 +208,13 @@ header{
     and (max-device-height: 769px) 
     and (min-device-height: 769px){
         .learning_intentions_section{ 
-            top: 8vh;
-            left: 2vh;
+            position: absolute;
+                width: 650px;
+                height: 445px;
+                z-index: 15;
+                top: 7.5%;
+                left: 6.5%;
+                margin: 0px -100px 0px -100px;
         }
 
         .learning_intentions_module{
@@ -245,9 +262,13 @@ header{
     and (max-device-height: 896px) 
     and (min-device-height: 896px){
         .learning_intentions_section{ 
-            top: 8vh;
-            left: 4vh;
-            position: center;
+            position: c;
+                width: 650px;
+                height: 445px;
+                z-index: 15;
+                top: 7.5%;
+                left: 6.5%;
+                margin: 0px -100px 0px -100px;
         }
 
         .learning_intentions_module{
