@@ -270,7 +270,7 @@ and (max-device-width: 414px) and (max-device-height: 896px){
     .learning_intentions_section {
         position: absolute;
         justify-content: center;
-        left: 2rem;
+        left: 3.5rem;
         width: 20rem;
         height: 16.5rem;
         z-index: 15rem;
