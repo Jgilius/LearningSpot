@@ -95,221 +95,227 @@ main {
     border: none;
 }
 
-
-/*Desktop 1920px x 1080px*/
+/* Complete Don't Touch*/
+/*Desktop 1920px x 1367px*/
 @media screen   
-    and (max-device-width: 1920px) 
-    and (min-device-width: 1367px) 
-    and (max-device-height: 1080px) 
-    and (min-device-height: 769px){
+and (max-device-width: 1920px) and (max-device-height: 1080px){
         
         .learning_intentions_section {
-                position: absolute;
-                left: 10%;
-                width: 33.33%;
-                    height: 45%;
-                z-index: 15rem;
-                    top: 7%;
-                    margin: 0rem -10rem 0rem -10rem;
+            position: absolute;
+            left: 11rem;
+            width: 40rem;
+            height: 31rem;
+            z-index: 15rem;
+            top: 5rem;
+            margin: 0rem -10rem 0rem -10rem;
         }
 
         .learning_intentions_module{
             padding: 1rem 0rem 0rem 2rem;
-                width: 100%;
-                height: 10rem;
+            width: 100rem;
+            height: 10rem;
         }
 
         .learning_intentions_header{
             padding: 1rem 4rem 0rem 0rem;
             bottom: 1rem;
-            font-size: 16px;
+            font-size: 1rem;
         }
         
         .learning_intention{
-            padding: 0.5rem;
-            font-size: 12px;
+            padding: 1rem 2rem;
+            font-size: 0.8rem;
             word-wrap: break-all;
-            width: 80%;
-                text-align: left;
+            width: 22rem;
+            text-align: left;
         }
 
         .confidence_level_module{
             padding: 1rem 2rem 0rem 0rem;
-                width: 50%;
-                height: 10rem;
+            width: 50rem;
+            height: 10rem;
         }
 
         .confidence_level_header{
             padding: 1rem 0rem 0rem 0rem;
             bottom: 1rem;
-            font-size: 16px;
+            font-size: 1rem;
         }
 
-        .confidence_level{
-            padding: 0.75rem;
+        .confidence_button_group {
+            padding: 0.5rem;
         }    
 }
-
-Laptop 1366px x 768px
-@media screen   
-    and (max-device-width: 1366px) 
-    and (min-device-width: 1025px) 
-    and (max-device-height: 769px) 
-    and (min-device-height: 769px){
-        .learning_intentions_section{ 
-            position: absolute;
-                left: 7rem;
-                    width: 33.33%px;
-                    height: 40%;
-                z-index: 15;
-                top: 7.5%;
-            margin: 0px -100px 0px -100px;
-        }
-
-        .learning_intentions_module{
-            padding: 1rem;
-        }
-
-        .learning_intentions_header{
-            bottom: 0rem;
-            font-size: 16px;
-            -webkit-text-size-adjust: auto;
-            word-break: keep-all;
-
-        }
+/* Complete Don't Touch*/
+/*Laptop 1367px x 769px*/
+@media screen 
+and (max-device-width: 1367px) and (max-device-height: 769px) {
         
-        .learning_intention{
-            padding: 0.5rem;
-            font-size: 12px;
-            -webkit-text-size-adjust: auto;
-            word-wrap: break-all;
-            width: 200px;
-            text-align: center;
-        }
+    .learning_intentions_section {
+        position: absolute;
+        left: 11rem;
+        width: 27rem;
+        height: 21rem;
+        z-index: 15rem;
+        top: 5rem;
+        margin: 0rem -10rem 0rem -10rem;
+    }
 
-        .confidence_level_module{
-            padding: 1rem;
-        }
+    .learning_intentions_module{
+        padding: 0rem 0rem 0rem 0.5rem;
+        width: 100rem;
+        height: 5rem;
+    }
 
-        .confidence_level_header{
-            bottom: 0rem;
-            font-size: 16px;
-            -webkit-text-size-adjust: auto;
-            word-break: keep-all;
-        }
+    .learning_intentions_header{
+        padding: 0.5rem 2rem 0rem 0rem;
+        bottom: 0rem;
+        font-size: 0.8rem;
+    }
+    
+    .learning_intention{
+        padding: 0.5rem 1rem;
+        font-size: 0.6rem;
+        word-wrap: break-all;
+        width: 14rem;
+        text-align: left;
+    }
 
-        .confidence_level{
-            padding: 0.5rem;
-        }    
-}
+    .confidence_level_module{
+        padding: 0rem 0rem 0rem 0rem;
+        width: 40rem;
+        height: 10rem;
+    }
 
-Tablet 1024px x 768px
-@media screen   
-    and (max-device-width: 1024px) 
-    and (min-device-width: 1024px) 
-    and (max-device-height: 769px) 
-    and (min-device-height: 769px){
-        .learning_intentions_section{ 
-            position: absolute;
-                left: 7rem;
-                    width: 33.33%px;
-                    height: 40%;
-                z-index: 15;
-                top: 7.5%;
-            margin: 0px -100px 0px -100px;
-        }
+    .confidence_level_header{
+        padding: 0.5rem 0rem 0rem 0rem;
+        bottom: 0rem;
+        font-size: 0.8rem;
+    }
 
-        .learning_intentions_module{
-            padding: 0.5rem;
-        }
-
-        .learning_intentions_header{
-            bottom: 0rem;
-            font-size: 10px;
-            -webkit-text-size-adjust: auto;
-            word-break: keep-all;
-
-        }
+    .confidence_button_group {
+        padding: 0rem 0rem 0rem 0rem;
         
-        .learning_intention{
-            padding: 0.5rem;
-            font-size: 6px;
-            -webkit-text-size-adjust: auto;
-            word-wrap: break-all;
-            width: 135px;
-            text-align: center;
-        }
+    }
 
-        .confidence_level_module{
-            padding: 0.5rem;
-        }
-
-        .confidence_level_header{
-            bottom: 0rem;
-            font-size: 10px;
-            -webkit-text-size-adjust: auto;
-            word-break: keep-all;
-        }
-
-        .confidence_level{
-            padding: 0.5rem;
-            width: 100px;
-        }    
-}
-
-Mobile 414px x 896px
-@media screen   
-    and (max-device-width: 414px) 
-    and (min-device-width: 414px) 
-    and (max-device-height: 896px) 
-    and (min-device-height: 896px){
-        .learning_intentions_section{ 
-            position: absolute;
-                left: 7rem;
-                width: 33.33%px;
-                height: 40%;
-                z-index: 15;
-                top: 7.5%;
-            margin: 0px -100px 0px -100px;
-        }
-
-        .learning_intentions_module{
-            padding: 0.5rem;
-        }
-
-        .learning_intentions_header{
-            bottom: 0rem;
-            font-size: 8px;
-            -webkit-text-size-adjust: auto;
-            word-break: keep-all;
-
-        }
+    .button {
+        margin: 0rem 0rem;
+        padding: 0.7rem 0.6rem;
         
-        .learning_intention{
-            padding: 0.5rem;
-            font-size: 6px;
-            -webkit-text-size-adjust: auto;
-            word-wrap: break-all;
-            width: 135px;
-            text-align: center;
-        }
-
-        .confidence_level_module{
-            padding: 0.5rem;
-            right: 3vh;
-        }
-
-        .confidence_level_header{
-            bottom: 0rem;
-            font-size: 8px;
-            -webkit-text-size-adjust: auto;
-            word-break: keep-all;
-            
-        }
-
-        .confidence_level{
-            padding: 0.5rem;
-            width: 100px;
-        }    
+    } 
 }
-*/
+/* Complete Don't Touch*/
+/*Tablet 1024px x 768px*/
+@media screen   
+and (max-device-width: 1024px) and (max-device-height: 768px){
+    .learning_intentions_section {
+        position: absolute;
+        left: 11rem;
+        width: 20rem;
+        height: 18rem;
+        z-index: 15rem;
+        top: 5rem;
+        margin: 0rem -10rem 0rem -10rem;
+    }
+
+    .learning_intentions_module{
+        padding: 0rem 0rem 0rem 0.25rem;
+        width: 100rem;
+        height: 5rem;
+    }
+
+    .learning_intentions_header{
+        padding: 0.5rem 2rem 0rem 0rem;
+        bottom: 0rem;
+        font-size: 0.6rem;
+        left: 1rem;
+    }
+    
+    .learning_intention{
+        padding: 0.5rem 1rem;
+        font-size: 0.4rem;
+        word-wrap: break-all;
+        width: 11rem;
+        text-align: left;
+    }
+
+    .confidence_level_module{
+        padding: 0rem 0rem 0rem 0rem;
+        width: 40rem;
+        height: 5rem;
+    }
+
+    .confidence_level_header{
+        padding: 0.5rem 0rem 0rem 0rem;
+        bottom: 0rem;
+        font-size: 0.6rem;
+    }
+
+    .confidence_button_group {
+        padding: 0rem 0rem 0rem 0rem;
+    }
+
+    .button {
+        margin: 0rem 0rem;
+        padding: 0.3rem 0.2rem;  
+        transform: scale(0.8);
+    } 
+}
+
+/* Complete Don't Touch*/
+/* Mobile 414px x 896px */
+@media screen  
+and (max-device-width: 414px) and (max-device-height: 896px){
+    .learning_intentions_section {
+        position: absolute;
+        left: 12.5rem;
+        width: 20rem;
+        height: 16.5rem;
+        z-index: 15rem;
+        top: 5rem;
+        margin: 0rem -10rem 0rem -10rem;
+    }
+
+    .learning_intentions_module{
+        padding: 0rem 0rem 0rem 0.25rem;
+        width: 100rem;
+        height: 5rem;
+    }
+
+    .learning_intentions_header{
+        padding: 0.5rem 2rem 0rem 0rem;
+        bottom: 0rem;
+        font-size: 0.6rem;
+        left: 1rem;
+    }
+    
+    .learning_intention{
+        padding: 0.5rem 1rem;
+        font-size: 0.4rem;
+        word-wrap: break-all;
+        width: 11rem;
+        text-align: left;
+    }
+
+    .confidence_level_module{
+        padding: 0rem 0rem 0rem 0rem;
+        width: 40rem;
+        height: 5rem;
+    }
+
+    .confidence_level_header{
+        padding: 0.5rem 0rem 0rem 0rem;
+        bottom: 0rem;
+        font-size: 0.6rem;
+    }
+
+    .confidence_button_group {
+        padding: 0rem 0rem 0rem 0rem;
+    }
+
+    .button {
+        margin: 0rem 0rem;
+        padding: 0.3rem 0.2rem;  
+        transform: scale(0.8);
+    } 
+}
