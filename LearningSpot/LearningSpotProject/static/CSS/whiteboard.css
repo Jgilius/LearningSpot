@@ -1,16 +1,14 @@
-.zoom_window{
+.whiteboard_window{
     display: block;
     overflow: hidden;
-    text-align: center;
-    margin: 1rem 42rem 1rem 48.5rem;
     text-align: left;
-    border-radius: 2rem;
+    margin: 1rem 0rem 0rem 7rem;
     border: 1px solid;
     border-color: black;
-    width: 352px;
-    height: 352px;
+    width: 1018px;
+    height: 500px;
     border-radius: 2rem;
     transform: translateZ(0px);
     border: 2px solid; 
-    border-color: black;   
+    border-color: black;  
 }
