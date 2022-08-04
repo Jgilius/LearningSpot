@@ -1,0 +1,26 @@
+/* Complete Don't Touch*/
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Complete Don't Touch*/
+header {
+    min-height: 5vh;
+    background: linear-gradient(to right top, #65dfc962, #6cdaeb5c);
+    text-align: center;
+}
+/* Complete Don't Touch*/
+.container {
+    min-height: 100vh;
+    width: 100%;
+}
+/* Complete Don't Touch*/
+main {
+    font-family: 'Poppins', sans-serif, thin;
+    min-height: 100vh;
+    background: linear-gradient(to right top,#65dfc9, #6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
