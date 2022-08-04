@@ -78,24 +78,10 @@ main {
 }
 
 .confidence_level_header{
-    position: relative;
     display: flex;
-    flex-direction: column;
+    position: relative;
     align-items: center;
 }
-
-.confidence_level{
-    display: flex;
-    justify-content: space-between;
-    margin: 0.5rem 0rem;
-    border-radius: 1rem;
-    padding: 0.5rem;
-    margin: 0.5rem 0rem;
-    border-radius: 1rem;
-    box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
-}
-
-
 
 /* Desktop 1920px x 1080px */
 @media screen   
@@ -104,13 +90,14 @@ main {
     and (max-device-height: 1080px) 
     and (min-device-height: 769px){
         
-        .learning_intentions_section{ 
-            float: left;
-                width: 33.33%px;
+        .learning_intentions_section {
+                position: absolute;
+                left: 10%;
+                width: 33.33%;
                 height: 40%;
-                z-index: 15;
-                top: 7.5%;
-                margin: 0px -100px 0px -100px;
+                z-index: 15rem;
+                    top: 7%;
+                    margin: 0rem -10rem 0rem -10rem;
         }
 
         .learning_intentions_module{
@@ -120,15 +107,13 @@ main {
         .learning_intentions_header{
             bottom: 1rem;
             font-size: 16px;
-            -webkit-text-size-adjust: auto;
         }
         
         .learning_intention{
             padding: 0.5rem;
             font-size: 12px;
-            -webkit-text-size-adjust: auto;
             word-wrap: break-all;
-            width: 300px;
+            width: 90%;
             text-align: center;
         }
 
@@ -139,7 +124,6 @@ main {
         .confidence_level_header{
             bottom: 1rem;
             font-size: 16px;
-            -webkit-text-size-adjust: auto;
         }
 
         .confidence_level{
@@ -155,12 +139,12 @@ main {
     and (min-device-height: 769px){
         .learning_intentions_section{ 
             position: absolute;
-                width: 650px;
-                height: 445px;
+                left: 7rem;
+                    width: 33.33%px;
+                    height: 40%;
                 z-index: 15;
                 top: 7.5%;
-                left: 6.5%;
-                margin: 0px -100px 0px -100px;
+            margin: 0px -100px 0px -100px;
         }
 
         .learning_intentions_module{
@@ -208,12 +192,12 @@ main {
     and (min-device-height: 769px){
         .learning_intentions_section{ 
             position: absolute;
-                width: 650px;
-                height: 445px;
+                left: 7rem;
+                    width: 33.33%px;
+                    height: 40%;
                 z-index: 15;
                 top: 7.5%;
-                left: 6.5%;
-                margin: 0px -100px 0px -100px;
+            margin: 0px -100px 0px -100px;
         }
 
         .learning_intentions_module{
@@ -261,13 +245,13 @@ main {
     and (max-device-height: 896px) 
     and (min-device-height: 896px){
         .learning_intentions_section{ 
-            position: c;
-                width: 650px;
-                height: 445px;
+            position: absolute;
+                left: 7rem;
+                width: 33.33%px;
+                height: 40%;
                 z-index: 15;
                 top: 7.5%;
-                left: 6.5%;
-                margin: 0px -100px 0px -100px;
+            margin: 0px -100px 0px -100px;
         }
 
         .learning_intentions_module{
