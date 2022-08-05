@@ -1,6 +1,7 @@
 /* Complete Don't Touch*/
 .learning_intentions_section {
     display: flex;
+    position: absolute;
     background: white;
     background: linear-gradient(
         to right bottom, 
@@ -75,11 +76,13 @@
 and (max-device-width: 1920px) and (max-device-height: 1080px){
         
         .learning_intentions_section {
-            position: absolute;
+            display: flex;
+            position: relative;
             width: 40rem;
             height: 22rem;
-            margin: 1rem 0rem 0rem 7rem;
-            
+            float:left;
+            margin: 1rem 100% 0rem 5rem;
+            z-index: 1;
         }
 
         .learning_intentions_module{

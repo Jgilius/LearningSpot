@@ -1,5 +1,5 @@
 /* Complete Don't Touch*/
-.learning_task_section {
+.learning_material_section {
     display: flex;
     background: white;
     background: linear-gradient(
@@ -13,22 +13,22 @@
     border-color: black;
 }
 /* Complete Don't Touch*/
-.learning_task_module{
+.learning_material_module{
     background: none;
     border: none;
     border-color: none;
-    margin: 0.5rem 0rem;
+    margin: 25rem 0rem 0rem 5rem;
     border-radius: 1rem;
 }
 /* Complete Don't Touch*/
-.learning_task_header{
+.learning_material_header{
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 /* Complete Don't Touch*/
-.learning_task{
+.learning_material{
     display: flex;
     justify-content: center;
     background: linear-gradient(
@@ -41,7 +41,7 @@
     box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
 }
 /* Complete Don't Touch*/
-.progress_module {
+.dropbox_module {
     background: none;
     border: none;
     border-color: none;
@@ -49,17 +49,17 @@
     border-radius: 1rem;
 }
 /* Complete Don't Touch*/
-.progress_header {
+.dropbox_header {
     position: relative;
     align-items: center;
 }
 
 /* Complete Don't Touch*/
-.progress_button {
-    margin: 1.3rem 0rem 0rem 0rem;
+.dropbox_button {
+    margin: 1.5rem 0rem 0rem 0rem;
     border-radius: 1rem;
     box-shadow: none;
-    padding: 1rem 1rem;
+    padding: 1.8rem 2rem 0rem 2rem;
     outline: none;
     border: solid black;
     display: column;
@@ -71,16 +71,15 @@ and (max-device-width: 1920px) and (max-device-height: 1080px){
         .learning_task_section {
             position: absolute;
             overflow: hidden;
-            float:left;
-            margin: 1rem 0rem 0rem 74rem;
-            z-index: 3;
+            margin: 0rem 0rem 0rem 74rem;
+            z-index: 5;
             border-radius: 2rem;
             width: 40rem;
             height: 22rem;
             border-radius: 2rem;
             transform: translateZ(0px);
             border: 2px solid; 
-            border-color: black;   
+            border-color: black;  
         }
 
         .learning_task_module{

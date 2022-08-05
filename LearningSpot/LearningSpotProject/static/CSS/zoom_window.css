@@ -1,12 +1,10 @@
 .zoom_window{
-    display: block;
+    position: absolute;
     overflow: hidden;
-    text-align: center;
-    margin: 1rem 42rem 1rem 48.5rem;
-    text-align: left;
+    float: left;
+    margin: 1rem 0rem 0rem 48.5rem;
+    z-index: 2;
     border-radius: 2rem;
-    border: 1px solid;
-    border-color: black;
     width: 352px;
     height: 352px;
     border-radius: 2rem;

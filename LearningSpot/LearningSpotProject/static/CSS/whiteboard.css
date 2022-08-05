@@ -1,11 +1,11 @@
 .whiteboard_window{
-    display: block;
+    position: absolute;
     overflow: hidden;
-    text-align: left;
-    margin: 1rem 0rem 0rem 7rem;
+    margin: 25rem 0rem 0rem 5rem;
+    z-index: 4;
     border: 1px solid;
     border-color: black;
-    width: 1018px;
+    width: 1050px;
     height: 500px;
     border-radius: 2rem;
     transform: translateZ(0px);
