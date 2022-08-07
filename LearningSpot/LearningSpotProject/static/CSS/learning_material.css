@@ -1,6 +1,7 @@
 /* Complete Don't Touch*/
 .learning_material_section {
     display: flex;
+    position: absolute;
     background: white;
     background: linear-gradient(
         to right bottom, 
@@ -15,10 +16,10 @@
 /* Complete Don't Touch*/
 .learning_material_module{
     background: none;
-    border: none;
-    border-color: none;
-    margin: 25rem 0rem 0rem 5rem;
-    border-radius: 1rem;
+        border: none;
+        border-color: none;
+        margin: 0.5rem 0rem;
+        border-radius: 1rem;
 }
 /* Complete Don't Touch*/
 .learning_material_header{
@@ -50,67 +51,73 @@
 }
 /* Complete Don't Touch*/
 .dropbox_header {
+    margin: 1.3rem 0rem 0rem 0rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
 /* Complete Don't Touch*/
 .dropbox_button {
-    margin: 1.5rem 0rem 0rem 0rem;
+    margin: 0rem 0rem;
     border-radius: 1rem;
     box-shadow: none;
-    padding: 1.8rem 2rem 0rem 2rem;
+    padding: 10px 16px;
     outline: none;
-    border: solid black;
-    display: column;
+    border: none;
 }
 
+/* Complete Don't Touch*/
+/*Desktop 1920px x 1367px*/
 @media screen   
 and (max-device-width: 1920px) and (max-device-height: 1080px){
         
-        .learning_task_section {
+        .learning_material_section {
+            display: flex;
             position: absolute;
-            overflow: hidden;
-            margin: 0rem 0rem 0rem 74rem;
-            z-index: 5;
-            border-radius: 2rem;
             width: 40rem;
-            height: 22rem;
-            border-radius: 2rem;
-            transform: translateZ(0px);
-            border: 2px solid; 
-            border-color: black;  
+            height: 26.5rem;
+            float:left;
+            margin: 29.7rem 0rem 0rem 74rem;
+            z-index: 1;
         }
 
-        .learning_task_module{
+        .learning_material_module{
             padding: 1rem 0rem 0rem 1rem;
             width: 100rem;
             height: 10rem;
         }
 
-        .learning_task_header{
-            padding: 1rem 4rem 0rem 0rem;
+        .learning_material_header{
+            padding: 0.5rem 0rem 0rem 9rem;
             bottom: 1rem;
             font-size: 1rem;
         }
         
-        .learning_task{
-            padding: 1rem 0.1rem 1rem 0.1rem;
+        .learning_material{
+            padding: 1rem 0rem 1rem 0.1rem;
+            margin: 0.8rem 0rem 0rem 3rem;
             font-size: 0.6rem;
             word-wrap: break-all;
             width: 22rem;
             text-align: left;
         }
 
-        .progress_module{
-            padding: 0rem 2rem 0rem 0rem;
+        .dropbox_module{
+            padding: 0.5rem 5rem 0rem 0rem;
             width: 18rem;
             height: 10rem;
         }
 
-        .progress_header{
-            padding: 1rem 0rem 1rem 0rem;
+        .dropbox_header{
+            padding: 1.6rem 0rem 1rem 0rem;
             bottom: 0rem;
             font-size: 1rem;
-        } 
+        }
+
+        .dropbox_button {
+            margin: 0rem 0rem 0rem 0rem;
+        }
+
 }
