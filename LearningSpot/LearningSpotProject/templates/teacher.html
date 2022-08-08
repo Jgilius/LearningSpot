@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Spot Student Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
+    <link href="../static/CSS/learning_intentions.css" rel="stylesheet" type="text/css" />
+    <link href="../static/CSS/zoom_window.css" rel="stylesheet" type="text/css" />
+    <link href="../static/CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../static/CSS/whiteboard.css" rel="stylesheet" type="text/css" />
+    <link href="../static/CSS/learning_task.css" rel="stylesheet" type="text/css" />
+    <link href="../static/CSS/learning_material.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="../static/CSS/learning_material.css" rel="stylesheet" type="text/css" /> -->
+  </head>
+  <body>
+    <header>
+      <h1> LearningSpot</h1>
+    </header>
+    <main>
+        <section class="container">
+<!----------------------------------------------------------------------------------------------------------------------------------------->
+          <div class="learning_intentions_section">
+              <div class="learning_intentions_module">
+                <div class="learning_intentions_header">
+                  <h1>Learning Intentions</h1>
+                </div>
+                
+                <div class="learning_intention_content">
+                  {% for i in learning_intentions %}
+                      <div class="learning_intention">
+                        <h2>{{i.li}}</h2>
+                      </div>
+                      {% endfor %}
+                </div>
+              </div>
+              <table style="border: thin solid coral">
+                <thead>
+                  <td> col1</td>
+                  <td> col2</td>
+                  <td> col3</td>
+                </thead>
+                <div class="confidence_level_content">
+                {% for li in learning_intentions %}
+                <tr>
+                  <td> row2 col1</td>
+                  <td> row2 col2</td>
+                  <td> row2 col3</td>
+                </tr>
+                {% endfor %}
+              </table>
+            </div>
+
+              <!-- <div class="confidence_level_module">
+                  <div class="confidence_level_header">
+                    <h1>Confidence Level</h1>
+                  </div>
+
+                  <div class="confidence_level_content">
+                    {% for li in learning_intentions %}
+                  <div class="confidence_button_group">
+                    <div class="button" type="happy_button"> <img src="../static/images/happy-removebg-preview.png" height="40rem"
+                        width="40rem" /></button>
+                    </div>
+                    <div class="button" type="unsure_button"><img src="../static/images/confused-removebg-preview.png" height="40rem"
+                        width="40rem" /></button>
+                    </div>
+                    <div class="button" type="unsure_button"><img src="../static/images/sad-removebg-preview.png" height="40rem"
+                        width="40rem" /></button>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div> -->
+          </div>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------->
+          <div class="zoom_window">
+            <iframe src="http://kidcreatorsteam.com" height="352px" width="352px" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+<!----------------------------------------------------------------------------------------------------------------------------------------->
+          <div class="learning_task_section">
+            <div class="learning_task_module">
+              <div class="learning_task_header">
+                <h1>Learning Task</h1>
+              </div>
+
+              <div class="learning_task_content">
+                {%for i in learning_tasks%}
+                <div class="learning_task">      
+                        <h2> {{i.lt}} </h2>
+                      </div>
+                {% endfor %}
+                </div>
+            </div>
+          
+            <div class="progress_module">
+                <div class="progress_header">
+                  <h1>Progress</h1>
+                </div>
+                <div class="learning_task_content">
+                {%for i in learning_tasks%}
+                <div class="progress_button" type="progress_button" height="50rem" width="60rem"></button>
+                </div>
+                {% endfor %}
+                </div>
+            </div>  
+          </div>
+<!----------------------------------------------------------------------------------------------------------------------------------------->
+          <div class="whiteboard_window">
+            <iframe width="1050" height="500" src="https://miro.com/app/live-embed/uXjVOgtIh38=/?moveToViewport=-1076,-543,2150,1085&embedId=710285842275" frameborder="0" scrolling="no" allowfullscreen></iframe>
+          </div>
+<!----------------------------------------------------------------------------------------------------------------------------------------->        
+          <div class="learning_material_section">
+            <div class="learning_material_module">
+              <div class="learning_material_header">
+                <h1>Learning Material</h1>
+              </div>
+              
+                <div class="learning_material">
+                      <div class="learning_material_content">
+                        <h2> Mathematics </h2>
+                      </div>
+                </div>
+                
+
+                <div class="learning_material">
+                      <div class="learning_material_content">
+                        <h2> Music </h2>
+                      </div>
+                </div>
+                
+
+                <div class="learning_material">
+                      <div class="learning_material_content">
+                        <h2> Geography </h2>
+                      </div>
+                </div>
+                
+
+                <div class="learning_material">
+                      <div class="learning_material_content">
+                        <h2> Art </h2>
+                      </div>
+                </div>
+
+                <div class="learning_material">
+                      <div class="learning_material_content">
+                        <h2> English </h2>
+                      </div>
+                </div>
+                
+            </div>
+
+            <div class="dropbox_module">
+                <div class="dropbox_header">
+                  <h1></h1>
+                </div>
+
+                <div class="dropbox_button" type="dropbox_button"><img src="../static/images/Dropbox_Logo-removebg-preview.png" height="40rem"
+                width="40rem"/></button> 
+                </div>
+
+                <div class="dropbox_button" type="dropbox_button"><img src="../static/images/Dropbox_Logo-removebg-preview.png" height="40rem"
+                width="40rem"/></button> 
+                </div>
+
+                <div class="dropbox_button" type="dropbox_button"><img src="../static/images/Dropbox_Logo-removebg-preview.png" height="40rem"
+                width="40rem"/></button> 
+                </div>
+
+                <div class="dropbox_button" type="dropbox_button"><img src="../static/images/Dropbox_Logo-removebg-preview.png" height="40rem"
+                width="40rem"/></button> 
+                </div>
+
+                <div class="dropbox_button" type="dropbox_button"><img src="../static/images/Dropbox_Logo-removebg-preview.png" height="40rem"
+                  width="40rem"/></button> 
+                </div>
+
+            </div>
+          </div>     
+        </section>
+    </main>
+        
+  </body>
+</html> 
