@@ -42,7 +42,7 @@
                     <h1>Confidence Level</h1>
                   </div>
 
-                  <div class="confidence_level_conent">
+                  <div class="confidence_level_content">
                     {% for li in learning_intentions %}
                   <div class="confidence_button_group">
                     <div class="button" type="happy_button"> <img src="../static/images/happy-removebg-preview.png" height="40rem"
@@ -70,60 +70,26 @@
               <div class="learning_task_header">
                 <h1>Learning Task</h1>
               </div>
-            
-                <div class="learning_task">
-                      <div class="learning_task_content">
-                        <h2> Maths Q's </h2>
+
+              <div class="learning_task_content">
+                {%for i in learning_tasks%}
+                <div class="learning_task">      
+                        <h2> {{i.lt}} </h2>
                       </div>
+                {% endfor %}
                 </div>
-
-                <div class="learning_task">
-                    <div class="learning_task_content">
-                      <h2> English Coursework </h2>
-                    </div>
-                </div>
-
-                <div class="learning_task">
-
-                    <div class="learning_task_content">
-                      <h2> Art Project </h2>
-                    </div>
-                </div>
-
-                <div class="learning_task">
-                    <div class="learning_task_content">
-                      <h2> Geography Task </h2>
-                    </div>
-                </div>
-
-                <div class="learning_task">
-                  <div class="learning_task_content">
-                    <h2> Music Practice </h2>
-                  </div>
-              </div>
-
             </div>
           
             <div class="progress_module">
                 <div class="progress_header">
                   <h1>Progress</h1>
                 </div>
-
+                <div class="learning_task_content">
+                {%for i in learning_tasks%}
                 <div class="progress_button" type="progress_button" height="50rem" width="60rem"></button>
                 </div>
-
-                <div class="progress_button" type="progress_button" height="50rem" width="60rem"></button>
+                {% endfor %}
                 </div>
-              
-                <div class="progress_button" type="progress_button" height="50rem" width="60rem"></button>
-                </div>
-
-                 <div class="progress_button" type="progress_button" height="50rem" width="60rem"></button>
-                </div>
-
-                <div class="progress_button" type="progress_button" height="50rem" width="60rem"></button>
-                </div>
-                
             </div>  
           </div>
 <!----------------------------------------------------------------------------------------------------------------------------------------->

@@ -7,7 +7,10 @@ def index(request):
 
 def home(request):
     learning_intentions = learning_intention.objects.all().order_by('created')
-    return render(request, 'home.html', {'learning_intentions' : learning_intentions},)
+    learning_tasks = learning_task.objects.all().order_by('created')
+
+    dynamic_content = {'learning_intentions' : learning_intentions, 'learning_tasks' : learning_tasks}
+    return render(request, 'home.html', dynamic_content)
 
     
 # {'learning_tasks' : learning_tasks}
