@@ -27,30 +27,15 @@
                 <div class="learning_intentions_header">
                   <h1>Learning Intentions</h1>
                 </div>
-              
-                  <div class="learning_intention">
-                        <div class="learning_intention_content">
-                          <h2> To understand the area of a circle formula. </h2>
-                        </div>
-                  </div>
-
-                  <div class="learning_intention">
-                      <div class="learning_intention_content">
-                        <h2> Be able to explain continental drift. </h2>
+                
+                <div class="learning_intention_content">
+                  {% for li in learning_intentions %}
+                      <div class="learning_intention">
+                        <h2>{{learning_intention.li}}</h2>
                       </div>
-                  </div>
-
-                  <div class="learning_intention">
-                      <div class="learning_intention_content">
-                        <h2> Be comfortable using the dry brush method. </h2>
-                      </div>
-                  </div>
-
-                  <div class="learning_intention">
-                      <div class="learning_intention_content">
-                        <h2> Be able to identify an anacrusis. </h2>
-                      </div>
-                  </div>
+                      {% endfor%}
+                </div>
+                  
               </div>
 
               <div class="confidence_level_module">
@@ -107,6 +92,7 @@
                   </div>
               </div>
           </div>
+
 <!----------------------------------------------------------------------------------------------------------------------------------------->
           <div class="zoom_window">
             <iframe src="http://kidcreatorsteam.com" height="352px" width="352px" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -175,7 +161,7 @@
           </div>
 <!----------------------------------------------------------------------------------------------------------------------------------------->
           <div class="whiteboard_window">
-            <iframe src="http://kidcreatorsteam.com" height="500px" width="1050px" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe width="1050" height="500" src="https://miro.com/app/live-embed/uXjVOgtIh38=/?moveToViewport=-1076,-543,2150,1085&embedId=710285842275" frameborder="0" scrolling="no" allowfullscreen></iframe>
           </div>
 <!----------------------------------------------------------------------------------------------------------------------------------------->        
           <div class="learning_material_section">
@@ -247,6 +233,7 @@
             </div>
           </div>     
         </section>
-    </main>    
+    </main>
+        
   </body>
 </html> 
