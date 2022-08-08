@@ -7,3 +7,4 @@ from .models import *
 # admin.site.register(zoom_student)
 # admin.site.register(whiteboard_student)
 admin.site.register(learning_intention)
+admin.site.register(learning_task)

@@ -29,13 +29,12 @@
                 </div>
                 
                 <div class="learning_intention_content">
-                  {% for li in learning_intentions %}
+                  {% for i in learning_intentions %}
                       <div class="learning_intention">
-                        <h2>{{learning_intention.li}}</h2>
+                        <h2>{{i.li}}</h2>
                       </div>
-                      {% endfor%}
+                      {% endfor %}
                 </div>
-                  
               </div>
 
               <div class="confidence_level_module">
@@ -43,6 +42,8 @@
                     <h1>Confidence Level</h1>
                   </div>
 
+                  <div class="confidence_level_conent">
+                    {% for li in learning_intentions %}
                   <div class="confidence_button_group">
                     <div class="button" type="happy_button"> <img src="../static/images/happy-removebg-preview.png" height="40rem"
                         width="40rem" /></button>
@@ -54,42 +55,8 @@
                         width="40rem" /></button>
                     </div>
                   </div>
-
-                  <div class="confidence_button_group">
-                    <div class="button" type="happy_button"> <img src="../static/images/happy-removebg-preview.png" height="40rem"
-                        width="40rem" /></button>
-                    </div>
-                    <div class="button" type="unsure_button"><img src="../static/images/confused-removebg-preview.png" height="40rem"
-                        width="40rem" /></button>
-                    </div>
-                    <div class="button" type="unsure_button"><img src="../static/images/sad-removebg-preview.png" height="40rem"
-                        width="40rem" /></button>
-                    </div>
-                  </div>
-
-                  <div class="confidence_button_group">
-                    <div class="button" type="happy_button"> <img src="../static/images/happy-removebg-preview.png" height="40rem"
-                        width="40rem" /></button>
-                    </div>
-                    <div class="button" type="unsure_button"><img src="../static/images/confused-removebg-preview.png" height="40rem"
-                        width="40rem" /></button>
-                    </div>
-                    <div class="button" type="unsure_button"><img src="../static/images/sad-removebg-preview.png" height="40rem"
-                        width="40rem" /></button>
-                    </div>
-                  </div>
-
-                  <div class="confidence_button_group">
-                    <div class="button" type="happy_button"> <img src="../static/images/happy-removebg-preview.png" height="40rem"
-                        width="40rem" /></button>
-                    </div>
-                    <div class="button" type="unsure_button"><img src="../static/images/confused-removebg-preview.png" height="40rem"
-                        width="40rem" /></button>
-                    </div>
-                    <div class="button" type="unsure_button"><img src="../static/images/sad-removebg-preview.png" height="40rem"
-                        width="40rem" /></button>
-                    </div>
-                  </div>
+                  {% endfor %}
+                </div>
               </div>
           </div>
 
