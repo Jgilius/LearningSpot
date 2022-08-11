@@ -13,14 +13,11 @@
         {% csrf_token %}
         <input type="hidden" name="learning_intention_id" value="{{obj.id}}">
         {% if user not in obj.happy.all %}
-        <button class="ui button positive" id="hs" type="submit">Select</button>
+        <button class="ui button positive" id="hs" type="submit" onclick="happy_onclick()">Select</button>
         {% else %}
-        <button class="ui button negative" id="hu" type="submit">Unselected</button>
+        <button class="ui button negative" id="hu" type="submit">Unselect</button>
         {% endif %}
     </form>
-
-    <script src="../static/JS/learning_intentions.js"></script>
-
     <strong>{{obj.happy.all.count}} Happy</strong>
 
     <!-- unsure -->
@@ -28,9 +25,9 @@
         {% csrf_token %}
         <input type="hidden" name="learning_intention_id" value="{{obj.id}}">
         {% if user not in obj.unsure.all %}
-        <button class="ui button positive" id="us" type="submit">Select</button>
+        <button class="ui button positive" id="us" type="submit" onclick="unsure_onclick()">Select</button>
         {% else %}
-        <button class="ui button negative" id="uu" type="submit">Unselected</button>
+        <button class="ui button negative" id="uu" type="submit">Unselect</button>
         {% endif %}
     </form>
     <strong>{{obj.unsure.all.count}} Unsure</strong>
@@ -40,14 +37,15 @@
         {% csrf_token %}
         <input type="hidden" name="learning_intention_id" value="{{obj.id}}">
         {% if user not in obj.sad.all %}
-        <button class="ui button positive" id="ss" type="submit">Select</button>
+        <button class="ui button positive" id="ss" type="submit" onclick="sad_onclick()">Select</button>
         {% else %}
-        <button class="ui button negative" id="su" type="submit">Unselected</button>
+        <button class="ui button negative" id="su" type="submit">Unselect</button>
         {% endif %}
     </form>
-
-
-
     <strong>{{obj.sad.all.count}} Sad</strong>
-{% endfor %}
+
+    {% endfor %}
+
+    <script src="../static/JS/learning_intentions.js"></script>
+    
 {%endblock content%}

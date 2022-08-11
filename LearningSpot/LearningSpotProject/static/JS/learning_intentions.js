@@ -1,9 +1,30 @@
 
-let hs = document.getElementByID("happy_form.hs");
-const happy_unselect = document.getElementById("hu");
-const unsure_select = document.getElementById("us");
-const unsure_unselect = document.getElementById("uu");
+//  const happy_button_select = document.querySelector(".hs").value;
+//  const unsure_button_select = document.querySelector(".us").value;
+//  const sad_button_select = document.querySelector(".ss").value;
+//  const happy_button_unselect = document.querySelector(".hu").value;
+//  const unsure_button_unselect = document.querySelector(".uu").value;
+//  const sad_button_unselect = document.querySelector(".su").value;
 
 
-hs.disabled = true;
-    unsure_select.disabled = true;
+ function all_active(){
+     hs.disabled = false; 
+     us.disabled = false;
+     ss.disabled = false; 
+ }
+
+ function happy_onclick(){
+
+    us.disabled = true;
+    ss.disabled = true;
+ }
+
+ function unsure_onclick(){
+     hs.disabled = true;
+     ss.disabled = true; 
+ }
+
+ function sad_onclick(){
+     hs.disabled = true;
+     us.disabled = true; 
+ }
