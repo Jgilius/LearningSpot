@@ -7,41 +7,47 @@
 {% for obj in qs %}
     <h1>{{ obj.title }}</h1>
     <p>{{ obj.body }}</p>
-
+   
     <!-- happy -->
-    <form action="{% url 'happy_select'%}" method ='POST' class="ui form">
+    <form action="{% url 'happy_select'%}" method ='POST' class="ui form" id="happy_form">
         {% csrf_token %}
         <input type="hidden" name="learning_intention_id" value="{{obj.id}}">
         {% if user not in obj.happy.all %}
-        <button class="ui button positive" type="submit">Select</button>
+        <button class="ui button positive" id="hs" type="submit">Select</button>
         {% else %}
-        <button class="ui button negative" type="submit">Unselected</button>
+        <button class="ui button negative" id="hu" type="submit">Unselected</button>
         {% endif %}
     </form>
+
+    <script src="../static/JS/learning_intentions.js"></script>
+
     <strong>{{obj.happy.all.count}} Happy</strong>
 
     <!-- unsure -->
-    <form action="{% url 'unsure_select'%}" method ='POST' class="ui form">
+    <form action="{% url 'unsure_select'%}" method ='POST' class="ui form" id="unsure">
         {% csrf_token %}
         <input type="hidden" name="learning_intention_id" value="{{obj.id}}">
         {% if user not in obj.unsure.all %}
-        <button class="ui button positive" type="submit">Select</button>
+        <button class="ui button positive" id="us" type="submit">Select</button>
         {% else %}
-        <button class="ui button negative" type="submit">Unselected</button>
+        <button class="ui button negative" id="uu" type="submit">Unselected</button>
         {% endif %}
     </form>
     <strong>{{obj.unsure.all.count}} Unsure</strong>
 
     <!-- sad -->
-    <form action="{% url 'sad_select'%}" method ='POST' class="ui form">
+    <form action="{% url 'sad_select'%}" method ='POST' class="ui form" id="sad">
         {% csrf_token %}
         <input type="hidden" name="learning_intention_id" value="{{obj.id}}">
         {% if user not in obj.sad.all %}
-        <button class="ui button positive" type="submit">Select</button>
+        <button class="ui button positive" id="ss" type="submit">Select</button>
         {% else %}
-        <button class="ui button negative" type="submit">Unselected</button>
+        <button class="ui button negative" id="su" type="submit">Unselected</button>
         {% endif %}
     </form>
+
+
+
     <strong>{{obj.sad.all.count}} Sad</strong>
 {% endfor %}
 {%endblock content%}

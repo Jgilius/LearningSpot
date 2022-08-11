@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render, get_object_or_404
+from django.shortcuts import redirect, render
 from .models import Learning_Intention, Happy_Select, Sad_Select, Unsure_Select
 
 def index(request):
@@ -47,7 +47,7 @@ def learning_intention(request):
 
 
 def happy_select(request):
-    user = request.user
+    user = request.user 
     if request.method == 'POST':
         learning_intention_id = request.POST.get('learning_intention_id')
         learning_intention_obj = Learning_Intention.objects.get(id=learning_intention_id)
@@ -121,3 +121,4 @@ def sad_select(request):
         sad.save()
 
     return redirect('learning_intention')
+
