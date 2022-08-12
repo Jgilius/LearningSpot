@@ -5,20 +5,19 @@ def index(request):
     return render(request, 'index.html')
 
 def student(request):
-    learning_intentions = learning_intention.objects.all()
-    learning_tasks = learning_task.objects.all()
+    learning_intentions = Learning_Intention.objects.all()
     user = request.user
 
-    dynamic_content = {'learning_intentions' : learning_intentions, 'learning_tasks' : learning_tasks, 'user' : user}
+    dynamic_content = {'learning_intentions' : learning_intentions, 'user' : user}
     
     return render(request, 'student.html', dynamic_content)
 
 
 def teacher(request):
-    learning_intentions = learning_intention.objects.all().order_by('created')
-    learning_tasks = learning_task.objects.all().order_by('created')
+    learning_intentions = Learning_Intention.objects.all()
 
-    dynamic_content = {'learning_intentions' : learning_intentions, 'learning_tasks' : learning_tasks}
+    dynamic_content = {'learning_intentions' : learning_intentions}
+
     return render(request, 'teacher.html', dynamic_content)
 
 

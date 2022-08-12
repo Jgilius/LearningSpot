@@ -6,28 +6,43 @@
  const unsure_button_unselect = document.getElementById("uu").value;
  const sad_button_unselect = document.getElementById("su").value;
  const happy_form = document.getElementById("happy_form").value;
-
- let happy_clicked;
+ var counterVal = 0;
 
  function all_active(){
      hs.disabled = false; 
      us.disabled = false;
      ss.disabled = false; 
- }
+}
+
+function disableUnsure(){
+    us.disabled = true;
+}
 
 
- function happy_onclick(){
+function incrementClick() {
+    updateDisplay(++counterVal);
+}
 
-        us.disabled = true;
-        ss.disabled = true;
- }
+function resetCounter() {
+    counterVal = 0;
+    updateDisplay(counterVal);
+}
 
- function unsure_onclick(){
-     hs.disabled = true;
-     ss.disabled = true; 
- }
 
- function sad_onclick(){
-     hs.disabled = true;
-     us.disabled = true; 
- }
+function happy_onclick() {
+    incrementClick();
+
+    if(counterVal != 0){
+        disableUnsure();
+    }
+}
+
+// function unsure_onclick(){
+//      hs.disabled = true;
+//      ss.disabled = true; 
+//  }
+
+//  function sad_onclick(){
+//      hs.disabled = true;
+//      us.disabled = true; 
+//  }
