@@ -1,0 +1,74 @@
+<title>LearningSpot - {% block title %}{% endblock title %}</title>
+
+<style>
+    #s{
+        background-color: Transparent;
+        outline: none;
+        border: none;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        padding: 0px;
+        text-align:center;
+        margin: 0px;
+    }
+
+    #u{
+        background-color: yellow;
+        outline: none;
+        border: none;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        padding: 0px;
+        text-align:center;
+        margin: 0px;
+    }
+</style>
+
+{%block content%}
+{% for obj in qs %}
+    <h1>{{ obj.title }}</h1>
+    <p>{{ obj.body }}</p>
+   
+    <!-- happy -->
+    <form action="{% url 'happy_select'%}" method ='POST' class="ui form" id="happy_form">
+        {% csrf_token %}
+        <input type="hidden" name="learning_intention_id" value="{{obj.id}}">
+        {% if user not in obj.happy.all %}
+        <button class="button_positive" id="s" type="submit"><img src="../static/images/smile.png" height="50px" width="50px"></button>
+        {% else %}
+        <button class="button_negative" id="u" type="submit"><img src="../static/images/smile.png" height="50px" width="50px"></button>
+        {% endif %}
+    </form>
+    <strong>{{obj.happy.all.count}} Happy</strong>
+
+    <!-- unsure -->
+    <form action="{% url 'unsure_select'%}" method ='POST' class="ui form" id="unsure">
+        {% csrf_token %}
+        <input type="hidden" name="learning_intention_id" value="{{obj.id}}">
+        {% if user not in obj.unsure.all %}
+        <button class="button_positive" id="s" type="submit"><img src="../static/images/neutral.png" height="50px" width="50px"></button>
+        {% else %}
+        <button class="button_negative" id="u" type="submit"><img src="../static/images/neutral.png" height="50px" width="50px"></button>
+        {% endif %}
+    </form>
+    <strong>{{obj.unsure.all.count}} Unsure</strong>
+
+    <!-- sad -->
+    <form action="{% url 'sad_select'%}" method ='POST' class="ui form" id="sad">
+        {% csrf_token %}
+        <input type="hidden" name="learning_intention_id" value="{{obj.id}}">
+        {% if user not in obj.sad.all %}
+        <button class="button_positive" id="s" type="submit"><img src="../static/images/sad.png" height="50px" width="50px"></button>
+        {% else %}
+        <button class="button_negative" id="u" type="submit"><img src="../static/images/sad.png" height="50px" width="50px"></button>
+        {% endif %}
+    </form>
+    <strong>{{obj.sad.all.count}} Sad</strong>
+
+    {% endfor %}
+
+    <script src="../static/JS/learning_intentions.js"></script>
+    
+{%endblock content%}

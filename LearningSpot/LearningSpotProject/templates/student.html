@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learning Spot Student Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
     <link href="../static/CSS/learning_intentions.css" rel="stylesheet" type="text/css" />
     <link href="../static/CSS/zoom_window.css" rel="stylesheet" type="text/css" />
     <link href="../static/CSS/main.css" rel="stylesheet" type="text/css" />
     <link href="../static/CSS/whiteboard.css" rel="stylesheet" type="text/css" />
     <link href="../static/CSS/learning_task.css" rel="stylesheet" type="text/css" />
     <link href="../static/CSS/learning_material.css" rel="stylesheet" type="text/css" />
-    <!-- <link href="../static/CSS/learning_material.css" rel="stylesheet" type="text/css" /> -->
+
   </head>
   <body>
     <header>
@@ -21,17 +21,100 @@
     </header>
     <main>
         <section class="container">
+ 
 <!----------------------------------------------------------------------------------------------------------------------------------------->
           <div class="learning_intentions_section">
+            <Style>
+              button#hs{
+                  background-color: Transparent;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+  
+              }
+  
+              button#hu{
+                  background-color: greenyellow;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+              }   
+
+              button#us{
+                  background-color: Transparent;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+  
+              }
+  
+              button#uu{
+                  background-color: yellow;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+              }   
+
+              button#ss{
+                  background-color: Transparent;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+  
+              }
+  
+              button#su{
+                  background-color: red;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+              }   
+            </Style>
               <div class="learning_intentions_module">
                 <div class="learning_intentions_header">
                   <h1>Learning Intentions</h1>
                 </div>
                 
                 <div class="learning_intention_content">
-                  {% for i in learning_intentions %}
+                  {% for obj in qs %}
                       <div class="learning_intention">
-                        <h2>{{i.li}}</h2>
+                        <h2>{{obj.title}}</h2>
                       </div>
                       {% endfor %}
                 </div>
@@ -43,17 +126,41 @@
                   </div>
 
                   <div class="confidence_level_content">
-                    {% for li in learning_intentions %}
+                    {% for obj in qs %}
                   <div class="confidence_button_group">
-                    
-                    <div class="button" type="happy_button"> <img src="../static/images/happy-removebg-preview.png" height="40rem"
-                        width="40rem" /></button>
+           
+                    <div>
+                        <form action="{% url 'happy_select'%}" method ='POST' id="liform">
+                        {% csrf_token %}
+                        <input type="hidden" name="learning_intention_id" value="{{obj.id}}">
+                        {% if user not in obj.happy.all %}
+                        <button id="hs" type="submit"><img src="../static/images/smile.png" height="50px" width="50px"></button>
+                        {% else %}
+                        <button id="hu" type="submit"><img src="../static/images/smile.png" height="50px" width="50px"></button>
+                        {% endif %}
+                        </form>
                     </div>
-                    <div class="button" type="unsure_button"><img src="../static/images/confused-removebg-preview.png" height="40rem"
-                        width="40rem" /></button>
+                    <div>
+                      <form action="{% url 'unsure_select'%}" method ='POST' id="liform">
+                      {% csrf_token %}
+                      <input type="hidden" name="learning_intention_id" value="{{obj.id}}" id =liinput>
+                      {% if user not in obj.unsure.all %}
+                      <button id="us" type="submit"><img src="../static/images/neutral.png" height="50px" width="50px"></button>
+                      {% else %}
+                      <button id="uu" type="submit"><img src="../static/images/neutral.png" height="50px" width="50px"></button>
+                      {% endif %}
+                      </form>
                     </div>
-                    <div class="button" type="unsure_button"><img src="../static/images/sad-removebg-preview.png" height="40rem"
-                        width="40rem" /></button>
+                    <div>
+                      <form action="{% url 'sad_select'%}" method ='POST' id="liform">
+                      {% csrf_token %}
+                      <input type="hidden" name="learning_intention_id" value="{{obj.id}}">
+                      {% if user not in obj.sad.all %}
+                      <button id="ss" type="submit"><img src="../static/images/sad.png" height="50px" width="50px"></button>
+                      {% else %}
+                      <button id="su" type="submit"><img src="../static/images/sad.png" height="50px" width="50px"></button>
+                      {% endif %}
+                      </form>
                     </div>
                   </div>
                   {% endfor %}
@@ -67,35 +174,195 @@
           </div>
 <!----------------------------------------------------------------------------------------------------------------------------------------->
           <div class="learning_task_section">
+
+            <style>
+              button#ips{
+                  background-color: Transparent;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+  
+              }
+  
+              button#ipu{
+                  background-color: orange;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+              }   
+
+              button#nss{
+                  background-color: Transparent;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+  
+              }
+  
+              button#nsu{
+                  background-color: red;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+              } 
+
+              button#nhs{
+                  background-color: Transparent;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+  
+              }
+  
+              button#nhu{
+                  background-color: pink;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+              } 
+
+              button#cs{
+                  background-color: Transparent;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+  
+              }
+  
+              button#cu{
+                  background-color: greenyellow;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+              } 
+            </style>
             <div class="learning_task_module">
               <div class="learning_task_header">
                 <h1>Learning Task</h1>
               </div>
 
               <div class="learning_task_content">
-                {%for i in learning_tasks%}
-                <div class="learning_task">      
-                        <h2> {{i.lt}} </h2>
-                      </div>
-                {% endfor %}
-                </div>
+                {% for obj in lt %}
+                    <div class="learning_task">
+                      <h2>{{obj.title}}</h2>
+                    </div>
+                    {% endfor %}
+              </div>
             </div>
           
             <div class="progress_module">
                 <div class="progress_header">
-                  <h1>Progress</h1>
+                  <h1>Status</h1>
                 </div>
                 <div class="learning_task_content">
-                {%for i in learning_tasks%}
-                <div class="progress_button" type="progress_button" height="50rem" width="60rem"></button>
+                {%for ob in lt%}
+                <div>
+
+                <div class="progress_button_group">
+                  <div>
+                  <form action="{% url 'inprogress_select'%}" method ='POST' id="ltform">
+                  {% csrf_token %}
+                  <input type="hidden" name="learning_task_id" value="{{ob.id}}">
+                  {% if user not in ob.inprogress.all %}
+                  <button id="ips" type="submit"><img src="../static/images/in_progress.png" height="50px" width="50px">In Progress</button>
+                  {% else %}
+                  <button id="ipu" type="submit"><img src="../static/images/in_progress.png" height="50px" width="50px">In Progress</button>
+                  {% endif %}
+                  </form>
                 </div>
+
+                <div>
+                  <form action="{% url 'notstarted_select'%}" method ='POST' id="ltform">
+                  {% csrf_token %}
+                  <input type="hidden" name="learning_task_id" value="{{ob.id}}">
+                  {% if user not in ob.notstarted.all %}
+                  <button id="nss" type="submit"><img src="../static/images/not_started.png" height="50px" width="50px">Not Started</button>
+                  {% else %}
+                  <button id="nsu" type="submit"><img src="../static/images/not_started.png" height="50px" width="50px">Not Started</button>
+                  {% endif %}
+                  </form>
+                </div>
+
+                <div>
+                  <form action="{% url 'needhelp_select'%}" method ='POST' id="ltform">
+                  {% csrf_token %}
+                  <input type="hidden" name="learning_task_id" value="{{ob.id}}">
+                  {% if user not in ob.needhelp.all %}
+                  <button id="nhs" type="submit"><img src="../static/images/help.png" height="50px" width="50px">Need Help</button>
+                  {% else %}
+                  <button id="nhu" type="submit"><img src="../static/images/help.png" height="50px" width="50px">Need Help</button>
+                  {% endif %}
+                  </form>
+                </div>
+
+                <div>
+                  <form action="{% url 'complete_select'%}" method ='POST' id="ltform">
+                  {% csrf_token %}
+                  <input type="hidden" name="learning_task_id" value="{{ob.id}}">
+                  {% if user not in ob.complete.all %}
+                  <button id="cs" type="submit"><img src="../static/images/done.png" height="50px" width="50px">Complete</button>
+                  {% else %}
+                  <button id="cu" type="submit"><img src="../static/images/done.png" height="50px" width="50px">Complete</button>
+                  {% endif %}
+                  </form>
+                </div>
+              </div>
                 {% endfor %}
                 </div>
-            </div>  
+              </div>  
+            </div>
           </div>
 <!----------------------------------------------------------------------------------------------------------------------------------------->
           <div class="whiteboard_window">
-            <iframe width="1050" height="500" src="https://miro.com/app/live-embed/uXjVOgtIh38=/?moveToViewport=-1076,-543,2150,1085&embedId=710285842275" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            <iframe width="1050" height="500" src="https://miro.com/app/live-embed/uXjVOgtIh38=/?moveToViewport=-768,-388,1536,775&embedId=706226557259" frameborder="0" scrolling="no" allowfullscreen></iframe>
           </div>
 <!----------------------------------------------------------------------------------------------------------------------------------------->        
           <div class="learning_material_section">
