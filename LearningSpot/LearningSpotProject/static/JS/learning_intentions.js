@@ -14,10 +14,6 @@
      ss.disabled = false; 
 }
 
-function disableUnsure(){
-    us.disabled = true;
-}
-
 
 function incrementClick() {
     updateDisplay(++counterVal);
@@ -30,19 +26,22 @@ function resetCounter() {
 
 
 function happy_onclick() {
+    
     incrementClick();
 
-    if(counterVal != 0){
-        disableUnsure();
+    if(counterVal == 1){
+        hs.disabled = true;
+        ss.disabled = true; 
+        us.disabled = true;
     }
 }
 
-// function unsure_onclick(){
-//      hs.disabled = true;
-//      ss.disabled = true; 
-//  }
+function unsure_onclick(){
+     hs.disabled = true;
+     ss.disabled = true; 
+ }
 
-//  function sad_onclick(){
-//      hs.disabled = true;
-//      us.disabled = true; 
-//  }
+ function sad_onclick(){
+     hs.disabled = true;
+     us.disabled = true; 
+ }
