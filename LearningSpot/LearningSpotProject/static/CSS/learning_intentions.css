@@ -82,7 +82,7 @@ and (max-device-width: 1920px) and (max-device-height: 1080px){
             width: 40rem;
             height: 22rem;
             float:left;
-            margin: 1rem 0rem 0rem 5rem;
+            margin: 2rem 0rem 0rem 5rem;
             z-index: 1;
         }
 
@@ -113,7 +113,8 @@ and (max-device-width: 1920px) and (max-device-height: 1080px){
         }
 
         .confidence_level_header{
-            padding: 2rem 0rem 1.2rem 0.5rem;
+            white-space: nowrap;
+            padding: 2rem 2rem 1.2rem 0rem;
             bottom: 1rem;
             font-size: 1rem;
         }

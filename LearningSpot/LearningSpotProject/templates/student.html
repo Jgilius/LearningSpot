@@ -174,7 +174,6 @@
           </div>
 <!----------------------------------------------------------------------------------------------------------------------------------------->
           <div class="learning_task_section">
-
             <style>
               button#ips{
                   background-color: Transparent;
@@ -308,51 +307,52 @@
 
                 <div class="progress_button_group">
                   <div>
-                  <form action="{% url 'inprogress_select'%}" method ='POST' id="ltform">
-                  {% csrf_token %}
-                  <input type="hidden" name="learning_task_id" value="{{ob.id}}">
-                  {% if user not in ob.inprogress.all %}
-                  <button id="ips" type="submit"><img src="../static/images/in_progress.png" height="50px" width="50px">In Progress</button>
-                  {% else %}
-                  <button id="ipu" type="submit"><img src="../static/images/in_progress.png" height="50px" width="50px">In Progress</button>
-                  {% endif %}
-                  </form>
-                </div>
+                    <form action="{% url 'inprogress_select'%}" method ='POST' id="ltform">
+                      {% csrf_token %}
+                      <input type="hidden" name="learning_task_id" value="{{ob.id}}">
+                      {% if user not in ob.inprogress.all %}
+                      <button id="ips" type="submit"><img src="../static/images/in_progress.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">In Progress</label></nobr></button>
+                      {% else %}
+                      <button id="ipu" type="submit"><img src="../static/images/in_progress.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">In Progress</label></nobr></button>
+                      {% endif %}
+                    </form>
+                  </div>
 
-                <div>
-                  <form action="{% url 'notstarted_select'%}" method ='POST' id="ltform">
-                  {% csrf_token %}
-                  <input type="hidden" name="learning_task_id" value="{{ob.id}}">
-                  {% if user not in ob.notstarted.all %}
-                  <button id="nss" type="submit"><img src="../static/images/not_started.png" height="50px" width="50px">Not Started</button>
-                  {% else %}
-                  <button id="nsu" type="submit"><img src="../static/images/not_started.png" height="50px" width="50px">Not Started</button>
-                  {% endif %}
-                  </form>
-                </div>
+                  <div>
+                    <form action="{% url 'notstarted_select'%}" method ='POST' id="ltform">
+                      {% csrf_token %}
+                      <input type="hidden" name="learning_task_id" value="{{ob.id}}">
+                      {% if user not in ob.notstarted.all %}
+                      <button id="nss" type="submit"><img src="../static/images/not_started.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Not Started</label></nobr></button>
+                      {% else %}
+                      <button id="nsu" type="submit"><img src="../static/images/not_started.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Not Started</label></nobr></button>
+                      {% endif %}
+                    </form>
+                  </div>
 
-                <div>
-                  <form action="{% url 'needhelp_select'%}" method ='POST' id="ltform">
-                  {% csrf_token %}
-                  <input type="hidden" name="learning_task_id" value="{{ob.id}}">
-                  {% if user not in ob.needhelp.all %}
-                  <button id="nhs" type="submit"><img src="../static/images/help.png" height="50px" width="50px">Need Help</button>
-                  {% else %}
-                  <button id="nhu" type="submit"><img src="../static/images/help.png" height="50px" width="50px">Need Help</button>
-                  {% endif %}
-                  </form>
-                </div>
+                  <div>
+                    <form action="{% url 'needhelp_select'%}" method ='POST' id="ltform">
+                      {% csrf_token %}
+                      <input type="hidden" name="learning_task_id" value="{{ob.id}}">
+                      {% if user not in ob.needhelp.all %}
+                      <button id="nhs" type="submit"><img src="../static/images/help.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Need Help</label></nobr></button>
+                      {% else %}
+                      <button id="nhu" type="submit"><img src="../static/images/help.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Need Help</label></nobr></button>
+                      {% endif %}
+                    </form>
+                  </div>
 
-                <div>
-                  <form action="{% url 'complete_select'%}" method ='POST' id="ltform">
-                  {% csrf_token %}
-                  <input type="hidden" name="learning_task_id" value="{{ob.id}}">
-                  {% if user not in ob.complete.all %}
-                  <button id="cs" type="submit"><img src="../static/images/done.png" height="50px" width="50px">Complete</button>
-                  {% else %}
-                  <button id="cu" type="submit"><img src="../static/images/done.png" height="50px" width="50px">Complete</button>
-                  {% endif %}
-                  </form>
+                  <div>
+                    <form action="{% url 'complete_select'%}" method ='POST' id="ltform">
+                      {% csrf_token %}
+                      <input type="hidden" name="learning_task_id" value="{{ob.id}}">
+                      {% if user not in ob.complete.all %}
+                      <button id="cs" type="submit"><img src="../static/images/done.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Complete</label></nobr></button>
+                      {% else %}
+                      <button id="cu" type="submit"><img src="../static/images/done.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Complete</label></nobr></button>
+                      {% endif %}
+                    </form>
+                  </div>
                 </div>
               </div>
                 {% endfor %}
@@ -360,81 +360,23 @@
               </div>  
             </div>
           </div>
+          
 <!----------------------------------------------------------------------------------------------------------------------------------------->
           <div class="whiteboard_window">
-            <iframe width="1050" height="500" src="https://miro.com/app/live-embed/uXjVOgtIh38=/?moveToViewport=-768,-388,1536,775&embedId=706226557259" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            <iframe width="864" height="512" src="https://miro.com/app/live-embed/uXjVOgtIh38=/?moveToViewport=-768,-388,1536,775&embedId=437399637611"  frameborder="0" scrolling="no" allowfullscreen></iframe> 
           </div>
 <!----------------------------------------------------------------------------------------------------------------------------------------->        
           <div class="learning_material_section">
-            <div class="learning_material_module">
               <div class="learning_material_header">
                 <h1>Learning Material</h1>
               </div>
-              
-                <div class="learning_material">
-                      <div class="learning_material_content">
-                        <h2> Mathematics </h2>
-                      </div>
+                <div class="material_selection">
                 </div>
-                
-
-                <div class="learning_material">
-                      <div class="learning_material_content">
-                        <h2> Music </h2>
-                      </div>
-                </div>
-                
-
-                <div class="learning_material">
-                      <div class="learning_material_content">
-                        <h2> Geography </h2>
-                      </div>
-                </div>
-                
-
-                <div class="learning_material">
-                      <div class="learning_material_content">
-                        <h2> Art </h2>
-                      </div>
-                </div>
-
-                <div class="learning_material">
-                      <div class="learning_material_content">
-                        <h2> English </h2>
-                      </div>
-                </div>
-                
-            </div>
-
-            <div class="dropbox_module">
-                <div class="dropbox_header">
-                  <h1></h1>
-                </div>
-
-                <div class="dropbox_button" type="dropbox_button"><img src="../static/images/Dropbox_Logo-removebg-preview.png" height="40rem"
-                width="40rem"/></button> 
-                </div>
-
-                <div class="dropbox_button" type="dropbox_button"><img src="../static/images/Dropbox_Logo-removebg-preview.png" height="40rem"
-                width="40rem"/></button> 
-                </div>
-
-                <div class="dropbox_button" type="dropbox_button"><img src="../static/images/Dropbox_Logo-removebg-preview.png" height="40rem"
-                width="40rem"/></button> 
-                </div>
-
-                <div class="dropbox_button" type="dropbox_button"><img src="../static/images/Dropbox_Logo-removebg-preview.png" height="40rem"
-                width="40rem"/></button> 
-                </div>
-
-                <div class="dropbox_button" type="dropbox_button"><img src="../static/images/Dropbox_Logo-removebg-preview.png" height="40rem"
-                  width="40rem"/></button> 
-                </div>
-
-            </div>
-          </div>     
+                  <div class="powerpoint">
+                    <iframe width="772.8" height="456" src="https://gla-my.sharepoint.com/personal/2203577g_student_gla_ac_uk/_layouts/15/Doc.aspx?sourcedoc={8577b8a9-953c-48ff-af9d-10e2c2ec2c3b}&amp;action=embedview&amp;wdAr=1.7777777777777777"  frameborder="0" scrolling="no" allowfullscreen></iframe> 
+                  </div>
+          </div>  
         </section>
     </main>
-        
   </body>
 </html> 

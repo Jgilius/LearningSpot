@@ -23,49 +23,41 @@
 }
 /* Complete Don't Touch*/
 .learning_material_header{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-/* Complete Don't Touch*/
-.learning_material{
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(
-        to right top, 
-        rgba(255,255,255,0.5),
-        rgba(255,255,255,0.2)
-        );
-    margin: 0.5rem 0rem;
-    border-radius: 1rem;
-    box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
-}
-/* Complete Don't Touch*/
-.dropbox_module {
-    background: none;
-    border: none;
-    border-color: none;
-    margin: 0.5rem 0rem;
-    border-radius: 1rem;
-}
-/* Complete Don't Touch*/
-.dropbox_header {
-    margin: 1.3rem 0rem 0rem 0rem;
+    white-space: nowrap;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Complete Don't Touch*/
-.dropbox_button {
-    margin: 0rem 0rem;
-    border-radius: 1rem;
-    box-shadow: none;
-    padding: 10px 16px;
-    outline: none;
-    border: none;
+.material_selection{
+    position: absolute;
+    height: 31.8rem;
+    width:4.9rem;
+    border: 2px solid;
+    border-color: black;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    margin-left: 48.5rem;
+    padding: 0rem 5.5rem 0rem 0rem;
+    margin: 0rem 0rem 0rem 48.2rem; 
+    z-index: 6;
+}
+
+.powerpoint{
+    position: absolute;
+    overflow: hidden;
+    margin: 3.4rem 11rem 0rem 0rem;
+    z-index: 4;
+    border: 1px solid;
+    border-color: black;
+    width: 48.3rem;
+    height: 28.6rem;
+    transform: translateZ(0px);
+    border: 2px solid; 
+    border-color: black;
+    border-bottom-left-radius: 2rem;  
+
 }
 
 /* Complete Don't Touch*/
@@ -73,14 +65,14 @@
 
 @media screen   
 and (max-device-width: 1920px) and (max-device-height: 1080px){
-        
+
         .learning_material_section {
             display: flex;
             position: absolute;
-            width: 40rem;
-            height: 26.5rem;
+            width: 54rem;
+            height: 32rem;
             float:left;
-            margin: 29.7rem 0rem 0rem 74rem;
+            margin: 25rem 0rem 0rem 60rem;
             z-index: 1;
         }
 
@@ -91,11 +83,12 @@ and (max-device-width: 1920px) and (max-device-height: 1080px){
         }
 
         .learning_material_header{
-            padding: 0.5rem 0rem 0rem 9rem;
+            white-space: nowrap;
+            padding: 1.5rem 0rem 1.2rem 17rem;
             bottom: 1rem;
             font-size: 1rem;
         }
-        
+
         .learning_material{
             padding: 1rem 0rem 1rem 0.1rem;
             margin: 0.8rem 0rem 0rem 3rem;
@@ -105,20 +98,5 @@ and (max-device-width: 1920px) and (max-device-height: 1080px){
             text-align: left;
         }
 
-        .dropbox_module{
-            padding: 0.5rem 5rem 0rem 0rem;
-            width: 18rem;
-            height: 10rem;
-        }
-
-        .dropbox_header{
-            padding: 1.6rem 0rem 1rem 0rem;
-            bottom: 0rem;
-            font-size: 1rem;
-        }
-
-        .dropbox_button {
-            margin: 0rem 0rem 0rem 0rem;
-        }
-
-}
+       
+}                          
