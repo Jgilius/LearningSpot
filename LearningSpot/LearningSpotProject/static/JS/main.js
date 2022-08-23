@@ -33,8 +33,10 @@ document.getElementById('join-btn').addEventListener('click', async ()=>{
 //connect to the agora app
 let joinStreams = async () =>{ //async arrow function 
 
+    
+
     [config.uid, localTracks.audioTracks, localTracks.videoTracks] = await Promise.all([ //passing list after 'Promise; into list before to complete API call//
-        client.join(config.appid, config.channel, config.token), //refers to config and gathers attributes^^//
+        client.join(config.appid, config.channel, config.token, config.uid || null), //refers to config and gathers attributes^^//
         AgoraRTC.createMicrophoneAudioTrack(), //allows user to connect audio to stream by populating audioTracks (set to null in localTracks^)
         AgoraRTC.createCameraVideoTrack(), //allows user to connect video to stream by populating videoTracks (set to null in localTracks^)
     ]) 
@@ -52,4 +54,11 @@ let joinStreams = async () =>{ //async arrow function
 
 //complete async asyn function ^
     await client.publish([localTracks.audioTracks, localTracks.videoTracks])
+
+    //event listen for remote user joining 
+    client.on("user-published", handleUserJoined)
+}
+
+let handleUserJoined = async (use, mediaType) => {
+    console.log('user has joined stream')
 }
