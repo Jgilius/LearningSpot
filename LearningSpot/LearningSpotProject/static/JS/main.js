@@ -6,7 +6,7 @@ let client = AgoraRTC.createClient({mode:"rtc", 'codec':"vp8"})
 // connect to agora application 'LearningSpot' as created in App Builder
 let config = {
     appid:'4e7bcf7bbff741599b6b82ce27663b2d',
-    token:'007eJxTYIhKnKTIMDudI93rW1VmSj03G3/9T936tbNbrR68eGX8fKUCg0mqeVJymnlSUlqauYmhqaVlklmShVFyqpG5mZlxklHKZAHWZOEktmTd2kcsjAwQCOKzMOQmZuYxMAAA2S0eGw==', //'main'
+    token:'007eJxTYLg4ZWfm60qzjdy++xNfSH//vfKPEkf59elR6zexrp4qUuakwGCSap6UnGaelJSWZm5iaGppmWSWZGGUnGpkbmZmnGSUMmU5W7LIT/bkQJlKRkYGCATxWRhyEzPzGBgA1eIhVw==', //'main'
     uid:null,
     channel:'main',
 }
@@ -59,6 +59,16 @@ let joinStreams = async () =>{ //async arrow function
     client.on("user-published", handleUserJoined)
 }
 
-let handleUserJoined = async (use, mediaType) => {
-    console.log('user has joined stream')
+let handleUserJoined = async (user, mediaType) => { //main browser listens for new users then recognises when they have joined
+    console.log('new user has joined stream')
+    remoteTracks[user.uid] = user //add the new user to remote tracks with key value pair^
+
+    await subscribe(user, mediaType) //subscribes new user to stream
+
+ let videoPlayer = `<div class="video-containers" id="video-wrapper-${user.uid}"> 
+                                <p class="user-uid"> ${user.uid}</p>
+                                <div class="video-player player" id="stream-${user.uid}"></div> 
+                        </div>` //use template literals to create video wrapper and adds a unique id from config for each user
+
+
 }
