@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.6.11.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learning Spot Student Page</title>
@@ -170,9 +171,7 @@
 
 <!----------------------------------------------------------------------------------------------------------------------------------------->
           <div class="zoom_window">
-            <div class="iframe-container" style="overflow: hidden; padding-top: 100%; position: relative;">
-              <iframe allow="microphone; camera" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%;" src="https://success.zoom.us/wc/join/{745-6026-5900}" frameborder="0"></iframe>
-          </div>
+            <div id="me"></div>
           </div>
 <!----------------------------------------------------------------------------------------------------------------------------------------->
           <div class="learning_task_section">

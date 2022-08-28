@@ -12,3 +12,13 @@
     border: 2px solid; 
     border-color: black;   
 }
+
+#me{
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+#me video{
+    position: relative !important;
+}
