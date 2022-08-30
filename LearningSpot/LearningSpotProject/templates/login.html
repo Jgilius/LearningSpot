@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
+    <link href="../static/CSS/register.css" rel="stylesheet" type="text/css" />
+    <link href="../static/CSS/main.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <header>
+      <h1> Login</h1>
+    </header>
+    <main>
+        <section class="container">
+
+        <div class="input">
+            <form method="POST" actions="">
+            
+            {% csrf_token %}
+
+                <div class="entry">
+                {{form.username.label}}
+                {{form.username}}
+                </div>
+
+                <div class="entry">
+                {{form.email.label}}
+                {{form.email}}
+                </div>
+
+                <div class="entry">
+                {{form.password1.label}}
+                {{form.password1}}
+                </div>
+
+                <div class="entry">
+                {{form.password2.label}}
+                {{form.password2}}
+                </div>
+
+            <input type="submit" name="Create User">
+            {% for message in messages %}
+                <p id = 'messages'>{{message}}</p>
+            {% endfor %}
+
+            <div class="reg_already">
+                <div class="sign_up">Not signed up yet?
+                    <a href="{% url 'register'%}"> Sign Up</a>
+                </div>
+            </div>
+            
+            </form>
+        </div>
+
+        </section>
+    </main>
+</body>
+

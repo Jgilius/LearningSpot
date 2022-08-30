@@ -45,36 +45,36 @@ client.join("007eJxTYLjEMYcjbrtI8ZaNSYu0rq463ihxbaIfy/+l578GxJ/r+WGgwGCSap6UnGae
     // Initialize the local stream
     localStream.init(()=>{
         // Play the local stream
-        localStream.play("me");
+        localStream.play("zoom_window");
         // Publish the local stream
         client.publish(localStream, handleError);
     }, handleError);
   }, handleError);
 
-// Subscribe to the remote stream when it is published
-client.on("stream-added", function(evt){
-    client.subscribe(evt.stream, handleError);
-});
-// Play the remote stream when it is subsribed
-client.on("stream-subscribed", function(evt){
-    let stream = evt.stream;
-    let streamId = String(stream.getId());
-    addVideoStream(streamId);
-    stream.play(streamId);
-});
+// // Subscribe to the remote stream when it is published
+// client.on("stream-added", function(evt){
+//     client.subscribe(evt.stream, handleError);
+// });
+// // Play the remote stream when it is subsribed
+// client.on("stream-subscribed", function(evt){
+//     let stream = evt.stream;
+//     let streamId = String(stream.getId());
+//     addVideoStream(streamId);
+//     stream.play(streamId);
+// });
 
-// Remove the corresponding view when a remote user unpublishes.
-client.on("stream-removed", function(evt){
-    let stream = evt.stream;
-    let streamId = String(stream.getId());
-    stream.close();
-    removeVideoStream(streamId);
-});
-// Remove the corresponding view when a remote user leaves the channel.
-client.on("peer-leave", function(evt){
-    let stream = evt.stream;
-    let streamId = String(stream.getId());
-    stream.close();
-    removeVideoStream(streamId);
-});
+// // Remove the corresponding view when a remote user unpublishes.
+// client.on("stream-removed", function(evt){
+//     let stream = evt.stream;
+//     let streamId = String(stream.getId());
+//     stream.close();
+//     removeVideoStream(streamId);
+// });
+// // Remove the corresponding view when a remote user leaves the channel.
+// client.on("peer-leave", function(evt){
+//     let stream = evt.stream;
+//     let streamId = String(stream.getId());
+//     stream.close();
+//     removeVideoStream(streamId);
+// });
 

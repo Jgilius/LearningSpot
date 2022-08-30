@@ -1,8 +1,30 @@
 from django.shortcuts import redirect, render
 from .models import LTComplete, LTInProgress, LTNeedHelp, LTNotStarted, Learning_Intention, Happy_Select, Learning_Task, Sad_Select, Unsure_Select
+from django.contrib.auth.forms import UserCreationForm
+from .forms import CreateUser
+from django.contrib import messages
 
 def index(request):
     return render(request, 'index.html')
+
+
+def register(request):
+    form = CreateUser( )
+
+    if request.method == 'POST':
+        form = CreateUser(request.POST)
+        if form.is_valid():
+            form.save()
+            user = form.cleaned_data.get('username')
+            messages.success(request, 'Account was created for ' + user)
+            return redirect('login')
+
+    context={'form': form}
+    return render (request, 'register.html', context)
+
+def login(request):
+    context={}
+    return render (request, 'login.html', context)
 
 def student(request):
     qs = Learning_Intention.objects.all()
