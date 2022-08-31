@@ -12,51 +12,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
-<body>
-    <header>
-      <h1> Register</h1>
-    </header>
-    <main>
-        <section class="container">
+<main>
+    <section class="container">
+            <div class="register_container">
+                <div class="register_card">
 
-        <div class="input">
-            <form method="POST" actions="">
+                    <div class="register_header">
+                        <h3 id="title">REGISTER</h3>
+                    </div>
+
+                            <div class="register_credentials">
+                                <form method="POST" action="">
+
+                                    {% csrf_token %}
+
+                                    <div class="username_group_reg">
+                                        <div class="username_input_reg">
+                                            {{form.username.label}}
+                                            {{form.username}}
+                                        </div>
+                                    </div>
+
+                                    <div class="email_group_reg">
+                                        <div class="email_input_reg">
+                                            {{form.email.label}}
+                                            {{form.email}}
+                                        </div>   
+                                    </div>
+
+                                    <div class="password1_group_reg">
+                                        <div class="password1_input_reg">
+                                            {{form.password1.label}}
+                                            {{form.password1}}
+                                        </div>                                           
+                                    </div>
+
+                                    <div class="password2_group_reg">
+                                        <div class="password2_input_reg">
+                                            {{form.password2.label}}
+                                            {{form.password2}}
+                                        </div>                                           
+                                    </div>
             
-            {% csrf_token %}
+                                        <div class="register_button">
+                                            <input type="submit" name="Create User">
+                                        </div>
 
-                <div class="entry">
-                {{form.username.label}}
-                {{form.username}}
-                </div>
-
-                <div class="entry">
-                {{form.email.label}}
-                {{form.email}}
-                </div>
-
-                <div class="entry">
-                {{form.password1.label}}
-                {{form.password1}}
-                </div>
-
-                <div class="entry">
-                {{form.password2.label}}
-                {{form.password2}}
-                </div>
-
-            <input type="submit" name="Create User">
-                
-                {{form.errors}}
-                <div class="reg_already">
-                    <div class="login">Already have an account?
-                        <a href="{% url 'login'%}"> Login</a>
+                                            {{form.errors}}
+                                        <div class="reg_already">
+                                            <div class="login">Already have an account?
+                                                <a href="{% url 'login'%}"> Login</a>
+                                            </div>
+                                        </div>
+                                </form>
+                            </div>                        
                     </div>
                 </div>
-        
-            </form>
-        </div>
-
-        </section>
-    </main>
-</body>
-
+    </section>
+</main>

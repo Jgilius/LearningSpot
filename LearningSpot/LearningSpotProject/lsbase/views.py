@@ -3,6 +3,7 @@ from .models import LTComplete, LTInProgress, LTNeedHelp, LTNotStarted, Learning
 from django.contrib.auth.forms import UserCreationForm
 from .forms import CreateUser
 from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
 
 def index(request):
     return render(request, 'index.html')
@@ -16,15 +17,20 @@ def register(request):
         if form.is_valid():
             form.save()
             user = form.cleaned_data.get('username')
-            messages.success(request, 'Account was created for ' + user)
+            messages.success(request, 'An account was successfully created for ' + user + '.')
             return redirect('login')
 
     context={'form': form}
     return render (request, 'register.html', context)
 
+
+
 def login(request):
     context={}
     return render (request, 'login.html', context)
+
+
+
 
 def student(request):
     qs = Learning_Intention.objects.all()
