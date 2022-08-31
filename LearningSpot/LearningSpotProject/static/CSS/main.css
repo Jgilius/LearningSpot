@@ -7,11 +7,29 @@
 
 /* Complete Don't Touch*/
 header {
-    min-height: 5vh;
-    text-align: center;
+    padding: 0rem 0rem 0rem 58rem;
+    display: flex;
+    font-family: 'Poppins', sans-serif, thin;
     background: linear-gradient(to right top, #65dfc962, #6cdaeb5c);
-
 }
+
+.logout_button{
+    display: flex;
+    padding: 1rem 0rem 0rem 35rem;
+}
+
+.sign_out_btn{
+    color: black;
+    text-decoration: none;
+    cursor: auto;
+    font-family: 'Poppins', sans-serif, thin;
+    margin-bottom: 0rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+    width: 5rem;
+    height: 2rem;
+}
+
 /* Complete Don't Touch*/
 .container {
     display: flex;

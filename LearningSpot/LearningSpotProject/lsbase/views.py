@@ -4,12 +4,13 @@ from django.contrib.auth.forms import UserCreationForm
 from .forms import CreateUser
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     return render(request, 'index.html')
 
 
-def register(request):
+def register_page(request):
     form = CreateUser( )
 
     if request.method == 'POST':
@@ -25,13 +26,29 @@ def register(request):
 
 
 
-def login(request):
+def login_page(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            return redirect('student')
+
+        else: 
+            messages.info(request, 'username OR password is incorrect, please try again.')
+
     context={}
     return render (request, 'login.html', context)
 
 
+def user_logout(request):
+    logout(request)
+    return redirect('login')
 
-
+@login_required(login_url='login')
 def student(request):
     qs = Learning_Intention.objects.all()
     lt = Learning_Task.objects.all()
