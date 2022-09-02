@@ -82,13 +82,22 @@ def teacher(request):
 
 def learning_intention(request):
     qs = Learning_Intention.objects.all()
-    user = request.user
+    # user = request.user
     context = {
         'qs':qs,
-        'user':user,
+        # 'user':user,
     }
     return render (request,'student.html', context)
+    
 
+# def learning_intention_teacher(request):
+#     o = Learning_Intention.objects.all()
+#     # user = request.user
+#     context = {
+#         'o':o,
+#         # 'user':user,
+#     }
+#     return render (request,'teacher.html', context)
 
 
 def happy_select(request):
@@ -158,8 +167,7 @@ def learning_task(request):
         'lt':lt,
         'user':user,
         }
-    return render (request,'student.html', context)
-
+    return render (request,'student', context)
 
 
 def inprogress_select(request):
@@ -241,4 +249,16 @@ def complete_select(request):
     return redirect('student')
 
 
-def happy_percentage(request):
+def complete_percentage(request):
+    user = request.user 
+    learning_task_id = request.POST.get('learning_task_id')
+    learning_task_obj = Learning_Task.objects.get(id=learning_task_id)
+    if user in learning_task_obj.complete.all():
+         complete = learning_task_obj.complete.all.count()
+    complete_count = complete.count()
+    context = {
+        'complete': complete,
+        'complete_count' : complete_count
+    }
+    return render (request, 'teacher', context)
+    

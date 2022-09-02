@@ -18,7 +18,12 @@
   </head>
   <body>
     <header>
-      <h1> LearningSpot</h1>
+        <h1 id="logo"><img src="../static/images/LearningSpotLogo.png" height="50px" width="50px"></h1>
+      </div>
+        <div class="logout_button">
+          <span>Hello, {{request.user}}</span>
+          <button class="sign_out_btn"><a href="{% url 'logout' %}">Sign Out</a></button>
+        </div>
     </header>
     <main>
         <section class="container">
@@ -113,7 +118,8 @@
                 </div>
                 
                 <div class="learning_intention_content">
-                  {% for obj in qs %}
+                  {% for obj in o %}
+                  <h3>{{ obj.title }}</h3>
                       <div class="learning_intention">
                         <h2>{{obj.title}}</h2>
                       </div>
@@ -127,7 +133,7 @@
                   </div>
 
                   <div class="confidence_level_content">
-                    {% for obj in qs %}
+                    {% for obj in o %}
                   <div class="confidence_button_group">
            
                     <div>
