@@ -82,22 +82,18 @@ def teacher(request):
 
 def learning_intention(request):
     qs = Learning_Intention.objects.all()
-    # user = request.user
     context = {
         'qs':qs,
-        # 'user':user,
     }
     return render (request,'student.html', context)
     
 
-# def learning_intention_teacher(request):
-#     o = Learning_Intention.objects.all()
-#     # user = request.user
-#     context = {
-#         'o':o,
-#         # 'user':user,
-#     }
-#     return render (request,'teacher.html', context)
+def learning_intention_teacher(request):
+    o = Learning_Intention.objects.all()
+    content = {
+        'o':o,
+    }
+    return render (request,'teacher.html', content)
 
 
 def happy_select(request):
