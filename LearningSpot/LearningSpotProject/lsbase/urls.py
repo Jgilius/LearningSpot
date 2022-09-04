@@ -3,13 +3,15 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name="index"),
-    path('student/', views.student, name="student"),
+    # path('teacher/', views.LIInput, name="LIInput"),
     path('teacher/', views.teacher, name="teacher"),
+    path('student/', views.student, name="student"),
     path('register/', views.register_page, name="register"),
     path('login/', views.login_page, name="login"),
     path('logout/', views.user_logout, name="logout"),
     path('learning_intention/', views.learning_intention, name='learning_intention'),
-    # path('learning_intention_teacher/', views.learning_intention_teacher, name='learning_intention_teacher'),
+    # path('LI',views.LI,name='li'),
+    path('lecturer/', views.learning_intention_teacher, name='learning_intention_teacher'),
     path('learning_task/', views.learning_task, name='learning_task'),
     path('happy_select/', views.happy_select, name='happy_select'),
     path('unsure_select/', views.unsure_select, name='unsure_select'),

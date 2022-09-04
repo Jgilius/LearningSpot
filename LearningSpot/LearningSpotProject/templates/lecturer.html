@@ -125,13 +125,6 @@
                       {% endfor %}
                 </div>
               </div>
-              <div class="li_input">
-                <form action="" method="post">
-                  {{ formli }}
-                  <input type="submit">
-                {% csrf_token %}
-                </form>
-              </div>
 
               <div class="confidence_level_module">
                   <div class="confidence_level_header">
@@ -307,13 +300,6 @@
                     {% endfor %}
               </div>
             </div>
-            <div class="li_input">
-              <form action="" method="post">
-                {{ formlt }}
-                <input type="submit">
-              {% csrf_token %}
-              </form>
-            </div>
           
             <div class="progress_module">
                 <div class="progress_header">
@@ -325,7 +311,15 @@
 
                 <div class="progress_button_group">
                   <div>
-                    <h1>{{ lihappy }}</h1>
+                    <form action="{% url 'inprogress_select'%}" method ='POST' id="ltform">
+                      {% csrf_token %}
+                      <input type="hidden" name="learning_task_id" value="{{ob.id}}">
+                      {% if user not in ob.inprogress.all %}
+                      <button id="ips" type="submit"><img src="../static/images/in_progress.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">In Progress</label></nobr></button>
+                      {% else %}
+                      <button id="ipu" type="submit"><img src="../static/images/in_progress.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">In Progress</label></nobr></button>
+                      {% endif %}
+                    </form>
                   </div>
 
                   <div>

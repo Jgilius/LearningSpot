@@ -8,7 +8,7 @@ from django.contrib.auth.models import Group
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 from .decorators import user_not_authenticated, teacher_only
-from .forms import CreateUser
+from .forms import CreateUser, CreateLI, CreateLT
 from .models import LTComplete, LTInProgress, LTNeedHelp, LTNotStarted, Learning_Intention, Happy_Select, Learning_Task, Sad_Select, Unsure_Select
 
 
@@ -74,11 +74,39 @@ def student(request):
 @login_required(login_url='login')
 @teacher_only
 def teacher(request):
-    learning_intentions = Learning_Intention.objects.all()
-    dynamic_content = {'learning_intentions' : learning_intentions}
-    return render(request, 'teacher.html', dynamic_content)
+    qs = Learning_Intention.objects.all()
+    lt = Learning_Task.objects.all()
+    user = request.user
+    formli = CreateLI()
+    if request.method == 'POST':
+        formli = CreateLI(request.POST)
+        if formli.is_valid():
+            formli.save()
+    formlt = CreateLT()
+    if request.method == 'POST':
+        formlt = CreateLT(request.POST)
+        if formlt.is_valid():
+            formlt.save()
+    lihappy = Learning_Intention.num_happy
+
+    context = {
+        'qs':qs,
+        'lt':lt,
+        'user':user,
+        'formli':formli,
+        'formlt':formlt,
+        'lihappy':lihappy,
+    }
+    return render (request,'teacher.html', context)
 
 
+
+def learning_intention_teacher(request):
+    qs = Learning_Intention.objects.all()
+    context = {
+        'qs':qs,
+    }
+    return render (request,'teacher.html', context)
 
 def learning_intention(request):
     qs = Learning_Intention.objects.all()
@@ -86,14 +114,6 @@ def learning_intention(request):
         'qs':qs,
     }
     return render (request,'student.html', context)
-    
-
-def learning_intention_teacher(request):
-    o = Learning_Intention.objects.all()
-    content = {
-        'o':o,
-    }
-    return render (request,'teacher.html', content)
 
 
 def happy_select(request):
@@ -256,5 +276,5 @@ def complete_percentage(request):
         'complete': complete,
         'complete_count' : complete_count
     }
-    return render (request, 'teacher', context)
+    return render (request, 'teacher.html', context)
     

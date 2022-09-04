@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.6.11.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Spot Student Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
+    <link href="../static/CSS/learning_intentions.css" rel="stylesheet" type="text/css" />
+    <link href="../static/CSS/zoom_window.css" rel="stylesheet" type="text/css" />
+    <link href="../static/CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../static/CSS/whiteboard.css" rel="stylesheet" type="text/css" />
+    <link href="../static/CSS/learning_task.css" rel="stylesheet" type="text/css" />
+    <link href="../static/CSS/learning_material.css" rel="stylesheet" type="text/css" />
+
+  </head>
+
+  <body>
+    <header>
+        <h1 id="logo"><img src="../static/images/LearningSpotLogo.png" height="50px" width="50px"></h1>
+      </div>
+        <div class="logout_button">
+          <span>Hello, {{request.user}}</span>
+          <button class="sign_out_btn"><a href="{% url 'logout' %}">Sign Out</a></button>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+ 
+<!----------------------------------------------------------------------------------------------------------------------------------------->
+          <div class="learning_intentions_section">
+            <Style>
+              button#hs{
+                  background-color: Transparent;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+  
+              }
+  
+              button#hu{
+                  background-color: greenyellow;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+              }   
+
+              button#us{
+                  background-color: Transparent;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+  
+              }
+  
+              button#uu{
+                  background-color: yellow;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+              }   
+
+              button#ss{
+                  background-color: Transparent;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+  
+              }
+  
+              button#su{
+                  background-color: red;
+                  outline: none;
+                  border: none;
+                  height: 50px;
+                  width: 50px;
+                  text-align:center;
+                  margin:-0.5rem 0.5rem 1.2rem 1.5rem;
+                  border-radius: 2rem;
+                  box-shadow: none;
+                  padding: 0rem 0rem 0rem 0rem;
+              }   
+            </Style>
+              <div class="learning_intentions_module">
+                <div class="learning_intentions_header">
+                  <h1>Learning Intentions</h1>
+                </div>
+                
+                <div class="learning_intention_content">
+                      <div class="learning_intention">
+                        <form action="" method="post">
+                            {{ form }}
+                            <input type="submit">
+                          {% csrf_token %}
+                         
+                        </form>
+                      </div>
+                      
+                </div>
+              </div>

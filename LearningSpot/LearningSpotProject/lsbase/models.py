@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Learning_Intention(models.Model):
-    title = models.CharField(max_length=150, default=None, blank=True)
+    title = models.CharField(max_length=150)
     happy = models.ManyToManyField(User, default=None, blank=True, related_name='happy') #user added when they like and removed when unlike
     unsure = models.ManyToManyField(User, default=None, blank=True, related_name='unsure')
     sad = models.ManyToManyField(User, default=None, blank=True, related_name='sad')
@@ -15,7 +15,8 @@ class Learning_Intention(models.Model):
     
     @property
     def num_happy(self):
-        return self.happy.all().count()
+        happy = self.happy.all().count()
+        return happy
 
     @property
     def num_unsure(self):

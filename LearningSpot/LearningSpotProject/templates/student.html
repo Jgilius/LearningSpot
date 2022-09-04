@@ -14,8 +14,9 @@
     <link href="../static/CSS/whiteboard.css" rel="stylesheet" type="text/css" />
     <link href="../static/CSS/learning_task.css" rel="stylesheet" type="text/css" />
     <link href="../static/CSS/learning_material.css" rel="stylesheet" type="text/css" />
-
   </head>
+
+  {% block content %}
   <body>
     <header>
         <h1 id="logo"><img src="../static/images/LearningSpotLogo.png" height="50px" width="50px"></h1>
@@ -24,7 +25,7 @@
           <span>Hello, {{request.user}}</span>
           <button class="sign_out_btn"><a href="{% url 'logout' %}">Sign Out</a></button>
         </div>
-    </header>
+    </header> 
     <main>
         <section class="container">
  
@@ -384,4 +385,5 @@
     </main>
     <script src="../static/JS/script.js"></script>
   </body>
+  {% endblock %}
 </html> 
