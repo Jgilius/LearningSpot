@@ -15,8 +15,8 @@ class Learning_Intention(models.Model):
     
     @property
     def num_happy(self):
-        happy = self.happy.all().count()
-        return happy
+        return self.happy.all().count()
+    
 
     @property
     def num_unsure(self):

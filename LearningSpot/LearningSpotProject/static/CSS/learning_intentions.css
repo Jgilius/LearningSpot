@@ -84,6 +84,10 @@
         );
 }
 
+.confidence_count_group{
+    display: inline-flex;
+}
+
 
 /* Complete Don't Touch*/
 /*Desktop 1920px x 1367px*/

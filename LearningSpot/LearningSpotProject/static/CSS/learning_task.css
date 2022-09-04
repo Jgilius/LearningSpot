@@ -77,6 +77,15 @@
     display:inline-block
 }
 
+.count_box{
+    border: 2px solid;
+    border-color: black;
+}
+
+.progress_count_group{
+    display: inline-flex;
+}
+
 /* Complete Don't Touch*/
 /*Desktop 1920px x 1367px*/
 
@@ -125,9 +134,5 @@ and (max-device-width: 1920px) and (max-device-height: 1080px){
             font-size: 1rem;
         }
 
-        .progress_button_group {
-        margin: 0rem 0rem;
-        padding: 01rem 0rem 1rem 0rem;
-        }
-
+    
 }

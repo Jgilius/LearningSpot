@@ -140,41 +140,20 @@
 
                   <div class="confidence_level_content">
                     {% for obj in qs %}
-                  <div class="confidence_button_group">
-           
                     <div>
-                        <form action="{% url 'happy_select'%}" method ='POST' id="liform">
-                        {% csrf_token %}
-                        <input type="hidden" name="learning_intention_id" value="{{obj.id}}">
-                        {% if user not in obj.happy.all %}
-                        <button id="hs" type="submit"><img src="../static/images/smile.png" height="50px" width="50px"></button>
-                        {% else %}
-                        <button id="hu" type="submit"><img src="../static/images/smile.png" height="50px" width="50px"></button>
-                        {% endif %}
-                        </form>
-                    </div>
-                    <div>
-                      <form action="{% url 'unsure_select'%}" method ='POST' id="liform">
-                      {% csrf_token %}
-                      <input type="hidden" name="learning_intention_id" value="{{obj.id}}" id =liinput>
-                      {% if user not in obj.unsure.all %}
-                      <button id="us" type="submit"><img src="../static/images/neutral.png" height="50px" width="50px"></button>
-                      {% else %}
-                      <button id="uu" type="submit"><img src="../static/images/neutral.png" height="50px" width="50px"></button>
-                      {% endif %}
-                      </form>
-                    </div>
-                    <div>
-                      <form action="{% url 'sad_select'%}" method ='POST' id="liform">
-                      {% csrf_token %}
-                      <input type="hidden" name="learning_intention_id" value="{{obj.id}}">
-                      {% if user not in obj.sad.all %}
-                      <button id="ss" type="submit"><img src="../static/images/sad.png" height="50px" width="50px"></button>
-                      {% else %}
-                      <button id="su" type="submit"><img src="../static/images/sad.png" height="50px" width="50px"></button>
-                      {% endif %}
-                      </form>
-                    </div>
+                      <div class="confidence_count_group">
+                        <div class="count_box">
+                          <h1>{{ obj.happy.all.count }}</h1>
+                        </div>
+      
+                        <div class="count_box">
+                          <h1>{{ obj.unsure.all.count }}</h1>
+                        </div>
+      
+                        <div class = "count_box">
+                          <h1>{{ obj.sad.all.count }}</h1>
+                        </div>
+                      </div>
                   </div>
                   {% endfor %}
                 </div>
@@ -323,46 +302,24 @@
                 {%for ob in lt%}
                 <div>
 
-                <div class="progress_button_group">
-                  <div>
-                    <h1>{{ lihappy }}</h1>
+                <div class="progress_count_group">
+
+                  <div class="count_box">
+                    <h1>{{ ob.inprogress.all.count }}</h1>
                   </div>
 
-                  <div>
-                    <form action="{% url 'notstarted_select'%}" method ='POST' id="ltform">
-                      {% csrf_token %}
-                      <input type="hidden" name="learning_task_id" value="{{ob.id}}">
-                      {% if user not in ob.notstarted.all %}
-                      <button id="nss" type="submit"><img src="../static/images/not_started.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Not Started</label></nobr></button>
-                      {% else %}
-                      <button id="nsu" type="submit"><img src="../static/images/not_started.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Not Started</label></nobr></button>
-                      {% endif %}
-                    </form>
+                  <div class="count_box">
+                    <h1>{{ ob.notstarted.all.count }}</h1>
                   </div>
 
-                  <div>
-                    <form action="{% url 'needhelp_select'%}" method ='POST' id="ltform">
-                      {% csrf_token %}
-                      <input type="hidden" name="learning_task_id" value="{{ob.id}}">
-                      {% if user not in ob.needhelp.all %}
-                      <button id="nhs" type="submit"><img src="../static/images/help.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Need Help</label></nobr></button>
-                      {% else %}
-                      <button id="nhu" type="submit"><img src="../static/images/help.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Need Help</label></nobr></button>
-                      {% endif %}
-                    </form>
+                  <div class = "count_box">
+                    <h1>{{ ob.needhelp.all.count }}</h1>
                   </div>
 
-                  <div>
-                    <form action="{% url 'complete_select'%}" method ='POST' id="ltform">
-                      {% csrf_token %}
-                      <input type="hidden" name="learning_task_id" value="{{ob.id}}">
-                      {% if user not in ob.complete.all %}
-                      <button id="cs" type="submit"><img src="../static/images/done.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Complete</label></nobr></button>
-                      {% else %}
-                      <button id="cu" type="submit"><img src="../static/images/done.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Complete</label></nobr></button>
-                      {% endif %}
-                    </form>
+                  <div class = "count_box">
+                    <h1>{{ ob.complete.all.count }}</h1>
                   </div>
+
                 </div>
               </div>
                 {% endfor %}
