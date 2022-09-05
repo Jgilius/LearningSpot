@@ -41,13 +41,14 @@
     margin: 0.5rem 0rem;
     border-radius: 1rem;
     box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
+    height: 3rem;
 }
 /* Complete Don't Touch*/
 .confidence_level_module {
     background: none;
     border: none;
     border-color: none;
-    margin: 0.5rem 0rem;
+    margin: 0rem 0rem;
     border-radius: 1rem;
 }
 /* Complete Don't Touch*/
@@ -85,6 +86,10 @@
 }
 
 .confidence_count_group{
+    border-bottom: 1px solid black;
+    display: inline-flex;
+    margin: -1rem 0rem 1.6rem 0rem;
+    padding: 0rem 0rem 0rem 2.5rem;
     display: inline-flex;
 }
 
@@ -119,10 +124,11 @@ and (max-device-width: 1920px) and (max-device-height: 1080px){
         }
         
         .learning_intention{
-            padding: 1rem 0.1rem 1rem 0.1rem;
+            padding: 0.5rem 0rem 0rem 0.1rem;
+            margin: 0.5rem 0rem 0rem 0.5rem;
             font-size: 0.6rem;
             word-wrap: break-all;
-            width: 22rem;
+            width: 20rem;
             text-align: left;
         }
 
@@ -133,12 +139,13 @@ and (max-device-width: 1920px) and (max-device-height: 1080px){
 
         .confidence_level_header{
             white-space: nowrap;
-            padding: 2rem 2rem 1.2rem 0rem;
+            padding: 2.5rem 1rem 1rem 0rem;
             bottom: 1rem;
             font-size: 1rem;
         }
 
         .confidence_button_group {
+            margin: 0rem 0rem -0.3rem 0rem;
             padding: 0rem 0rem 0rem 0rem;
         }
 

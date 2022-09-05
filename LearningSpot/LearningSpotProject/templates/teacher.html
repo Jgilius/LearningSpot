@@ -19,6 +19,10 @@
  
   <body>
     <header>
+      <div class="view_name">
+        <h3>Teacher View</h3>
+      </div>
+      <div>
         <h1 id="logo"><img src="../static/images/LearningSpotLogo.png" height="50px" width="50px"></h1>
       </div>
         <div class="logout_button">
@@ -137,7 +141,7 @@
               <div class="confidence_level_module">
                   <div class="confidence_level_header">
                     <h1>Confidence Level</h1>
-                    <div class="confidence_table_headers">Happy &nbsp;&nbsp;&nbsp;Unsure &nbsp;&nbsp;&nbsp;Sad</div>
+                    <div class="confidence_table_headers" style="font-size:12px;">Happy &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unsure &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sad</div>
                   </div>
 
                   <div class="confidence_level_content">
@@ -300,13 +304,16 @@
             <div class="progress_module">
                 <div class="progress_header">
                   <h1>Status</h1>
-                  <div class="confidence_table_headers">Happy &nbsp;&nbsp;&nbsp;Unsure &nbsp;&nbsp;&nbsp;Sad</div>
+                  <div class="confidence_table_headers"><span style="font-size:12px;">In Progress &nbsp;&nbsp;Not Started &nbsp;&nbsp;Need Help &nbsp;&nbsp;Complete</span></div>
                 </div>
                 <div class="learning_task_content">
                 {%for ob in lt%}
                 <div>
 
                 <div class="progress_count_group">
+                  <div class="count_box">
+                    <h1> </h1>
+                  </div>
 
                   <div class="count_box">
                     <h1>{{ ob.inprogress.all.count }}</h1>
@@ -334,7 +341,7 @@
           
 <!----------------------------------------------------------------------------------------------------------------------------------------->
           <div class="whiteboard_window">
-            <iframe width="864" height="512" src="https://miro.com/app/live-embed/uXjVOgtIh38=/?moveToViewport=-360,-388,720,775&embedId=872555069407" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            <iframe width="864" height="512" src="https://miro.com/app/live-embed/uXjVPaV8m4s=/?moveToViewport=-1247,-520,2423,1223&embedId=214385094739" frameborder="0" scrolling="no"></iframe>
           </div>
 <!----------------------------------------------------------------------------------------------------------------------------------------->        
           <div class="learning_material_section">

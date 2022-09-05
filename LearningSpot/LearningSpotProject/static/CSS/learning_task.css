@@ -39,19 +39,19 @@
         );
     border-radius: 1rem;
     box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
-    height: 50px;
+    height: 3rem;
 }
 /* Complete Don't Touch*/
 .progress_module {
     background: none;
     border: none;
     border-color: none;
-    margin: 0rem 0rem;
+    margin: 0rem 0rem 0rem 0rem;
     border-radius: 1rem;
 }
 /* Complete Don't Touch*/
 .progress_header {
-    margin: 0rem 0rem 0rem 0rem;
+    margin: 0rem 0rem 0.8rem 0rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -64,10 +64,9 @@
 /* Complete Don't Touch*/
 .progress_button_group{
     margin: 0rem 0rem 0rem 0rem;
-    padding: 0rem 0rem 0rem 4rem;
+    padding: 0rem 0rem 0.8rem 0rem;
     border-radius: 1rem;
     box-shadow: none;
-    padding: 10px 16px;
     outline: none;
     border: none;
 }
@@ -78,12 +77,15 @@
 }
 
 .count_box{
-    border: 2px solid;
-    border-color: black;
+    margin: 0rem 0rem 0rem 0rem;
+    padding: 0rem 3rem 0rem 0rem;
 }
 
 .progress_count_group{
+    border-bottom: 1px solid black;
     display: inline-flex;
+    margin: -1rem 0rem 1.5rem 0rem;
+    padding: 0.5rem 0rem 0rem 2rem;
 }
 
 /* Complete Don't Touch*/
@@ -125,7 +127,7 @@ and (max-device-width: 1920px) and (max-device-height: 1080px){
 
         .progress_module{
             padding: 0rem 0rem 0rem 0rem;
-            width: 18rem;
+            width: 30rem;
         }
 
         .progress_header{

@@ -7,7 +7,7 @@
 
 /* Complete Don't Touch*/
 header {
-    padding: 0rem 0rem 0rem 58rem;
+    padding: 0rem 0rem 0rem 10rem;
     display: flex;
     font-family: 'Poppins', sans-serif, thin;
     background: linear-gradient(to right top, #65dfc962, #6cdaeb5c);
@@ -15,7 +15,7 @@ header {
 
 .logout_button{
     display: flex;
-    padding: 1rem 0rem 0rem 35rem;
+    padding: 1rem 0rem 0rem 40rem;
 }
 
 .sign_out_btn{
@@ -28,6 +28,11 @@ header {
     font-size: 1rem;
     width: 5rem;
     height: 2rem;
+}
+
+.view_name{
+    display: flex;
+    padding: 1rem 40rem 0rem 0rem;
 }
 
 /* Complete Don't Touch*/

@@ -19,7 +19,12 @@
   {% block content %}
   <body>
     <header>
+      <div class="view_name">
+        <h3>Student View</h3>
+      </div>
+      <div>
         <h1 id="logo"><img src="../static/images/LearningSpotLogo.png" height="50px" width="50px"></h1>
+      </div>
       </div>
         <div class="logout_button">
           <span>Hello, {{request.user}}</span>
@@ -184,8 +189,8 @@
                   background-color: Transparent;
                   outline: none;
                   border: none;
-                  height: 50px;
-                  width: 50px;
+                  height: 37px;
+                  width: 37px;
                   text-align:center;
                   margin:-0.5rem 0.5rem 1.2rem 1.5rem;
                   border-radius: 2rem;
@@ -198,8 +203,8 @@
                   background-color: orange;
                   outline: none;
                   border: none;
-                  height: 50px;
-                  width: 50px;
+                  height: 37px;
+                  width: 37px;
                   text-align:center;
                   margin:-0.5rem 0.5rem 1.2rem 1.5rem;
                   border-radius: 2rem;
@@ -211,8 +216,8 @@
                   background-color: Transparent;
                   outline: none;
                   border: none;
-                  height: 50px;
-                  width: 50px;
+                  height: 37px;
+                  width: 37px;
                   text-align:center;
                   margin:-0.5rem 0.5rem 1.2rem 1.5rem;
                   border-radius: 2rem;
@@ -225,8 +230,8 @@
                   background-color: red;
                   outline: none;
                   border: none;
-                  height: 50px;
-                  width: 50px;
+                  height: 37px;
+                  width: 37px;
                   text-align:center;
                   margin:-0.5rem 0.5rem 1.2rem 1.5rem;
                   border-radius: 2rem;
@@ -238,8 +243,8 @@
                   background-color: Transparent;
                   outline: none;
                   border: none;
-                  height: 50px;
-                  width: 50px;
+                  height: 37px;
+                  width: 37px;
                   text-align:center;
                   margin:-0.5rem 0.5rem 1.2rem 1.5rem;
                   border-radius: 2rem;
@@ -252,8 +257,8 @@
                   background-color: pink;
                   outline: none;
                   border: none;
-                  height: 50px;
-                  width: 50px;
+                  height: 37px;
+                  width: 37px;
                   text-align:center;
                   margin:-0.5rem 0.5rem 1.2rem 1.5rem;
                   border-radius: 2rem;
@@ -265,8 +270,8 @@
                   background-color: Transparent;
                   outline: none;
                   border: none;
-                  height: 50px;
-                  width: 50px;
+                  height: 37px;
+                  width: 37px;
                   text-align:center;
                   margin:-0.5rem 0.5rem 1.2rem 1.5rem;
                   border-radius: 2rem;
@@ -279,8 +284,8 @@
                   background-color: greenyellow;
                   outline: none;
                   border: none;
-                  height: 50px;
-                  width: 50px;
+                  height: 37px;
+                  width: 37px;
                   text-align:center;
                   margin:-0.5rem 0.5rem 1.2rem 1.5rem;
                   border-radius: 2rem;
@@ -316,9 +321,9 @@
                       {% csrf_token %}
                       <input type="hidden" name="learning_task_id" value="{{ob.id}}">
                       {% if user not in ob.inprogress.all %}
-                      <button id="ips" type="submit"><img src="../static/images/in_progress.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">In Progress</label></nobr></button>
+                      <button id="ips" type="submit"><img src="../static/images/in_progress.png" height="37px" width="37px"><nobr><label style="color:black;font-size:11px;">In Progress</label></nobr></button>
                       {% else %}
-                      <button id="ipu" type="submit"><img src="../static/images/in_progress.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">In Progress</label></nobr></button>
+                      <button id="ipu" type="submit"><img src="../static/images/in_progress.png" height="37px" width="37px"><nobr><label style="color:black;font-size:11px;">In Progress</label></nobr></button>
                       {% endif %}
                     </form>
                   </div>
@@ -328,9 +333,9 @@
                       {% csrf_token %}
                       <input type="hidden" name="learning_task_id" value="{{ob.id}}">
                       {% if user not in ob.notstarted.all %}
-                      <button id="nss" type="submit"><img src="../static/images/not_started.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Not Started</label></nobr></button>
+                      <button id="nss" type="submit"><img src="../static/images/not_started.png" height="37px" width="37px"><nobr><label style="color:black;font-size:11px;">Not Started</label></nobr></button>
                       {% else %}
-                      <button id="nsu" type="submit"><img src="../static/images/not_started.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Not Started</label></nobr></button>
+                      <button id="nsu" type="submit"><img src="../static/images/not_started.png" height="37px" width="37px"><nobr><label style="color:black;font-size:11px;">Not Started</label></nobr></button>
                       {% endif %}
                     </form>
                   </div>
@@ -340,9 +345,9 @@
                       {% csrf_token %}
                       <input type="hidden" name="learning_task_id" value="{{ob.id}}">
                       {% if user not in ob.needhelp.all %}
-                      <button id="nhs" type="submit"><img src="../static/images/help.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Need Help</label></nobr></button>
+                      <button id="nhs" type="submit"><img src="../static/images/help.png" height="37px" width="37px"><nobr><label style="color:black;font-size:11px;">Need Help</label></nobr></button>
                       {% else %}
-                      <button id="nhu" type="submit"><img src="../static/images/help.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Need Help</label></nobr></button>
+                      <button id="nhu" type="submit"><img src="../static/images/help.png" height="37px" width="37px"><nobr><label style="color:black;font-size:11px;">Need Help</label></nobr></button>
                       {% endif %}
                     </form>
                   </div>
@@ -352,9 +357,9 @@
                       {% csrf_token %}
                       <input type="hidden" name="learning_task_id" value="{{ob.id}}">
                       {% if user not in ob.complete.all %}
-                      <button id="cs" type="submit"><img src="../static/images/done.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Complete</label></nobr></button>
+                      <button id="cs" type="submit"><img src="../static/images/done.png" height="37px" width="37px"><nobr><label style="color:black;font-size:11px;">Complete</label></nobr></button>
                       {% else %}
-                      <button id="cu" type="submit"><img src="../static/images/done.png" height="50px" width="50px"><nobr><label style="color:black;font-size:11px;">Complete</label></nobr></button>
+                      <button id="cu" type="submit"><img src="../static/images/done.png" height="37px" width="37px"><nobr><label style="color:black;font-size:11px;">Complete</label></nobr></button>
                       {% endif %}
                     </form>
                   </div>
@@ -368,7 +373,7 @@
           
 <!----------------------------------------------------------------------------------------------------------------------------------------->
           <div class="whiteboard_window">
-            <iframe width="864" height="512" src="https://miro.com/app/live-embed/uXjVOgtIh38=/?moveToViewport=-360,-388,720,775&embedId=872555069407" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            <iframe width="864" height="512" src="https://miro.com/app/live-embed/uXjVPaV8m4s=/?moveToViewport=-768,-388,1536,775&embedId=942947987376" frameborder="0" scrolling="no"></iframe>
           </div>
 <!----------------------------------------------------------------------------------------------------------------------------------------->        
           <div class="learning_material_section">
