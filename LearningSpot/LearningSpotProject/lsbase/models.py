@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Learning_Intention(models.Model):
-    title = models.CharField(max_length=150)
+    title = models.CharField(max_length=150,  default=None, blank=True)
     happy = models.ManyToManyField(User, default=None, blank=True, related_name='happy') #user added when they like and removed when unlike
     unsure = models.ManyToManyField(User, default=None, blank=True, related_name='unsure')
     sad = models.ManyToManyField(User, default=None, blank=True, related_name='sad')
@@ -56,7 +56,7 @@ class Sad_Select(models.Model):
         return str(self.learning_intention)
 
 class Learning_Task(models.Model):
-    title = models.CharField(max_length=150, default=None, blank=True)
+    title = models.CharField(max_length=150,  default=None, blank=True)
     notstarted = models.ManyToManyField(User, default=None, blank=True, related_name='notstarted')
     inprogress = models.ManyToManyField(User, default=None, blank=True, related_name='inprogress')
     complete = models.ManyToManyField(User, default=None, blank=True, related_name='complete')

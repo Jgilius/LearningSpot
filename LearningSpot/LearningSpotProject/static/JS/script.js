@@ -36,7 +36,7 @@ client.init("4e7bcf7bbff741599b6b82ce27663b2d", function() {
 });
 
 // Join a channel
-client.join("007eJxTYFhjs8a4JWvqO+VCltL0kFDhrhnnryTlcm7a8S37flZDyjEFBpNU86TkNPOkpLQ0cxNDU0vLJLMkC6PkVCNzMzPjJKOUEi/+5C+zBZJ9V5syMEIhiM/CkJuYmcfAAABwXCFD", "main", null, (uid)=>{
+client.join("007eJxTYHgU2Ln0iPavbKaeDi+31qeWfL/a17Al2eqzvW4RWP1+ko8Cg0mqeVJymnlSUlqauYmhqaVlklmShVFyqpG5mZlxklHKk5MiySnSYsmrz6xmZmSAQBCfhSE3MTOPgQEAWnYgYg==", "main", null, (uid)=>{
     // Create a local stream
     let localStream = AgoraRTC.createStream({
         audio: true,
@@ -51,17 +51,17 @@ client.join("007eJxTYFhjs8a4JWvqO+VCltL0kFDhrhnnryTlcm7a8S37flZDyjEFBpNU86TkNPOk
     }, handleError);
   }, handleError);
 
-// // Subscribe to the remote stream when it is published
-// client.on("stream-added", function(evt){
-//     client.subscribe(evt.stream, handleError);
-// });
-// // Play the remote stream when it is subsribed
-// client.on("stream-subscribed", function(evt){
-//     let stream = evt.stream;
-//     let streamId = String(stream.getId());
-//     addVideoStream(streamId);
-//     stream.play(streamId);
-// });
+// Subscribe to the remote stream when it is published
+client.on("stream-added", function(evt){
+    client.subscribe(evt.stream, handleError);
+});
+// Play the remote stream when it is subsribed
+client.on("stream-subscribed", function(evt){
+    let stream = evt.stream;
+    let streamId = String(stream.getId());
+    addVideoStream(streamId);
+    stream.play(streamId);
+});
 
 // // Remove the corresponding view when a remote user unpublishes.
 // client.on("stream-removed", function(evt){

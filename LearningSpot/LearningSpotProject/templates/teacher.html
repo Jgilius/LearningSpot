@@ -115,10 +115,11 @@
               <div class="learning_intentions_module">
                 <div class="learning_intentions_header">
                   <h1>Learning Intentions</h1>
+                  <div> </div>
                 </div>
                 
                 <div class="learning_intention_content">
-                  {% for obj in qs %}
+                  {% for obj in li %}
                       <div class="learning_intention">
                         <h2>{{obj.title}}</h2>
                       </div>
@@ -128,7 +129,7 @@
               <div class="li_input">
                 <form action="" method="post">
                   {{ formli }}
-                  <input type="submit">
+                  <input type="submit" name="li_input">
                 {% csrf_token %}
                 </form>
               </div>
@@ -136,10 +137,11 @@
               <div class="confidence_level_module">
                   <div class="confidence_level_header">
                     <h1>Confidence Level</h1>
+                    <div class="confidence_table_headers">Happy &nbsp;&nbsp;&nbsp;Unsure &nbsp;&nbsp;&nbsp;Sad</div>
                   </div>
 
                   <div class="confidence_level_content">
-                    {% for obj in qs %}
+                    {% for obj in li %}
                     <div>
                       <div class="confidence_count_group">
                         <div class="count_box">
@@ -276,20 +278,21 @@
             <div class="learning_task_module">
               <div class="learning_task_header">
                 <h1>Learning Task</h1>
+                
               </div>
 
               <div class="learning_task_content">
-                {% for obj in lt %}
+                {% for ob in lt %}
                     <div class="learning_task">
-                      <h2>{{obj.title}}</h2>
+                      <h2>{{ob.title}}</h2>
                     </div>
                     {% endfor %}
               </div>
             </div>
             <div class="li_input">
               <form action="" method="post">
-                {{ formlt }}
-                <input type="submit">
+                {{ ltform }}
+                <input type="submit" name="lt_input">
               {% csrf_token %}
               </form>
             </div>
@@ -297,6 +300,7 @@
             <div class="progress_module">
                 <div class="progress_header">
                   <h1>Status</h1>
+                  <div class="confidence_table_headers">Happy &nbsp;&nbsp;&nbsp;Unsure &nbsp;&nbsp;&nbsp;Sad</div>
                 </div>
                 <div class="learning_task_content">
                 {%for ob in lt%}

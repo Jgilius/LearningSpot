@@ -13,3 +13,18 @@
     border-color: black;   
 }
 
+.zoom_window_student{
+    position: absolute;
+    overflow: hidden;
+    float: left;
+    margin: 2rem 0rem 0rem 48.5rem;
+    z-index: 2;
+    border-radius: 2rem;
+    width: 352px;
+    height: 352px;
+    border-radius: 2rem;
+    transform: translateZ(0px);
+    border: 2px solid; 
+    border-color: black;   
+}
+

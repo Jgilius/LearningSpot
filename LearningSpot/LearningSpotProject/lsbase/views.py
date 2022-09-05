@@ -74,30 +74,43 @@ def student(request):
 @login_required(login_url='login')
 @teacher_only
 def teacher(request):
-    qs = Learning_Intention.objects.all()
+    li = Learning_Intention.objects.all()
     lt = Learning_Task.objects.all()
     user = request.user
+
     formli = CreateLI()
-    if request.method == 'POST':
+    if request.method == 'POST' and 'li_input' in request.POST:
         formli = CreateLI(request.POST)
         if formli.is_valid():
             formli.save()
-    formlt = CreateLT()
-    if request.method == 'POST':
-        formlt = CreateLT(request.POST)
-        if formlt.is_valid():
-            formlt.save()
+
+    ltform = CreateLT()
+    if request.method == 'POST' and 'lt_input' in request.POST:
+        ltform = CreateLT(request.POST)
+        if ltform.is_valid():
+            ltform.save()
+
     lihappy = Learning_Intention.num_happy
 
     context = {
-        'qs':qs,
+        'li':li,
         'lt':lt,
         'user':user,
         'formli':formli,
-        'formlt':formlt,
+        'ltform':ltform,
         'lihappy':lihappy,
     }
     return render (request,'teacher.html', context)
+
+
+
+
+
+
+
+
+
+
 
 
 

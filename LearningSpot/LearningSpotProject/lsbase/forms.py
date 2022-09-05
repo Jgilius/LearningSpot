@@ -17,7 +17,7 @@ class CreateLI(ModelForm):
     class Meta:
         model = Learning_Intention
         fields = ['title']
-        
+
 
 class CreateLT(ModelForm):
     class Meta:
