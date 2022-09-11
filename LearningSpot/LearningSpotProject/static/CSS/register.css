@@ -1,29 +1,157 @@
+
+@media screen   
+and (max-device-width: 1920px) and (max-device-height: 1080px){
 .register_container{
-  display: flex;
-  padding: 5rem 20rem 5rem 0rem;
-  border: 0.1rem solid black;
-  border-radius: 2rem;
-    position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      backdrop-filter: blur(30rem);
-      box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
-      background: linear-gradient(
-        to right bottom, 
-        rgba(16, 217, 224, 0.4), 
-        rgba(16, 179, 255, 0.2)
-        );
-  }
+display: flex;
+padding: 5rem 20rem 5rem 0rem;
+border: 0.1rem solid black;
+border-radius: 2rem;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: white;
+backdrop-filter: blur(30rem);
+box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
+background: linear-gradient(
+to right bottom, 
+rgba(16, 217, 224, 0.4), 
+rgba(16, 179, 255, 0.2)
+);
+}
 
-  .register_card{
-    margin: 2rem 3rem 0rem 16rem;
-    padding: 0rem 0rem 0rem 0rem;
-      position: fixed;
+.register_card{
+margin: 2rem 3rem 0rem 16rem;
+padding: 0rem 0rem 0rem 0rem;
+position: fixed;
 
-  }
-  
-      .entry{
-          display:flex;
-      }
+}
+
+.entry{
+display:flex;
+}
+}
+
+@media screen 
+and (max-device-width: 1367px) and (max-device-height: 769px) {
+.register_container{
+display: flex;
+padding: 3rem 18rem 3rem 0rem;
+border: 0.1rem solid black;
+border-radius: 2rem;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: white;
+backdrop-filter: blur(30rem);
+box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
+background: linear-gradient(
+to right bottom, 
+rgba(16, 217, 224, 0.4), 
+rgba(16, 179, 255, 0.2)
+);
+
+}
+
+.register_card{
+margin: 2rem 0rem 0rem 15rem;
+padding: 0rem 0rem 0rem 0rem;
+position: fixed;
+}
+
+.ls_logo{
+margin: 0rem 0rem 0rem 0rem;
+padding: 0rem 0rem 0rem 0rem;
+}
+.entry{
+display:flex;
+}
+
+
+}
+
+
+
+
+@media screen   
+and (max-device-width: 1024px) and (max-device-height: 768px){
+.register_container{
+display: flex;
+padding: 3rem 18rem 3rem 0rem;
+border: 0.1rem solid black;
+border-radius: 2rem;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: white;
+backdrop-filter: blur(30rem);
+box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
+background: linear-gradient(
+to right bottom, 
+rgba(16, 217, 224, 0.4), 
+rgba(16, 179, 255, 0.2)
+);
+
+}
+
+.register_card{
+margin: 2rem 0rem 0rem 15rem;
+padding: 0rem 0rem 0rem 0rem;
+position: fixed;
+}
+
+.ls_logo{
+margin: 0rem 0rem 0rem 0rem;
+padding: 0rem 0rem 0rem 0rem;
+}
+.entry{
+display:flex;
+}
+
+}
+
+
+
+@media screen  
+and (max-device-width: 414px) and (max-device-height: 896px){
+.register_container{
+display: flex;
+padding: 3rem 5rem 3rem 0rem;
+border: 0.1rem solid black;
+border-radius: 2rem;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: white;
+backdrop-filter: blur(30rem);
+box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
+background: linear-gradient(
+to right bottom, 
+rgba(16, 217, 224, 0.4), 
+rgba(16, 179, 255, 0.2)
+);
+
+
+}
+
+.register_card{
+margin: 0rem 0rem 0rem 10rem;
+padding: 0rem 0rem 0rem 0rem;
+position: fixed;
+transform: scale(0.7, 0.7);
+}
+
+.ls_logo{
+margin: 0rem 3rem 0rem 0rem;
+padding: 0rem 0rem 0rem 0rem;
+transform: scale(0.7, 0.7);
+}
+
+.entry{
+display:flex;
+}
+
+}
