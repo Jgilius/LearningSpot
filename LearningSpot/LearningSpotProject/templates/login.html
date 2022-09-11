@@ -15,54 +15,58 @@
 <main>
     <section class="container">
             <div class="login_card_container">
-                <div class="login_card">
-
-                    <div class="login_header">
-                        <h3 id="title">LOGIN</h3>
-                    </div>
-
-                    <div class="login_credentials">
-                        <form method="POST" action="">
-                            
-                            {% csrf_token %}
-
-                            <div class="username_group">
-                                <div class="username_input">
-                                    
-                                                            <!-- changing -->
-                                    <span class="username_input"></span> 
-
-                                </div>
-                                <input type="text" name="username" placeholder="Username..." class="form-control">
-                            </div>
-
-                            <div class="password_group">
-                                <div class="password_input">
-
-                                                            <!-- changing -->
-                                    <span class="password_input"></span>
-
-                                </div>
-                                    <input type="password" name="password" placeholder="Password..." class="form-control" >
-                            </div>
-
-                            {% for message in messages %}
-                                <p id="messages"> {{message}}</p>
-                            {% endfor %}
-    
-                                <div class="login_button">
-                                     <input class="login_btn" type="submit" value="Login">
-                                   </div>
-                        </form>
-                    </div>
-            
-                    <div class="no_account">
-                        <div class="no_account_content">
-                            Don't have an account yet? <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
-                    </div>
-
+                <div class="ls_logo">
+                    <img src="../static/images/LSLOGO.png" height="250px" width="250px"/>
                 </div>
-            </div>
+                
+    
+                <div class="login_card">
+                        <div class="login_header">
+                            <h3 id="title">LOGIN</h3>
+                        </div>
+
+                        <div class="login_credentials">
+                            <form method="POST" action="">
+                                
+                                {% csrf_token %}
+
+                                <div class="username_group">
+                                    <div class="username_input">
+                                        
+                                                                <!-- changing -->
+                                        <span class="username_input"></span> 
+
+                                    </div>
+                                    <input type="text" name="username" placeholder="Username..." class="form-control">
+                                </div>
+
+                                <div class="password_group">
+                                    <div class="password_input">
+
+                                                                <!-- changing -->
+                                        <span class="password_input"></span>
+
+                                    </div>
+                                        <input type="password" name="password" placeholder="Password..." class="form-control" >
+                                </div>
+
+                                {% for message in messages %}
+                                    <p id="messages"> {{message}}</p>
+                                {% endfor %}
+        
+                                    <div class="login_button">
+                                        <input class="login_btn" type="submit" value="Login">
+                                    </div>
+                            </form>
+                        </div>
+                
+                        <div class="no_account">
+                            <div class="no_account_content">
+                                Don't have an account yet? <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
+                        </div>
+
+                    </div>
+                </div>
         </div>
     </section>
 </main>

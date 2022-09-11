@@ -1,8 +1,27 @@
 .register_container{
-  position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  display: flex;
+  padding: 5rem 20rem 5rem 0rem;
+  border: 0.1rem solid black;
+  border-radius: 2rem;
+    position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      backdrop-filter: blur(30rem);
+      box-shadow: 6px 6px 20px rgba(122,122,122,0.2);
+      background: linear-gradient(
+        to right bottom, 
+        rgba(16, 217, 224, 0.4), 
+        rgba(16, 179, 255, 0.2)
+        );
+  }
+
+  .register_card{
+    margin: 2rem 3rem 0rem 16rem;
+    padding: 0rem 0rem 0rem 0rem;
+      position: fixed;
+
   }
   
       .entry{
