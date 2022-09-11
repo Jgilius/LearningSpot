@@ -1,3 +1,5 @@
+@media screen 
+and (max-device-width: 1920px) and (max-device-height: 1080px){
 .zoom_window{
     position: absolute;
     overflow: hidden;
@@ -26,5 +28,6 @@
     transform: translateZ(0px);
     border: 2px solid; 
     border-color: black;   
+}
 }
 

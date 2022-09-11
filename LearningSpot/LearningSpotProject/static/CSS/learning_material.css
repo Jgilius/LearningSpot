@@ -1,102 +1,80 @@
-/* Complete Don't Touch*/
-.learning_material_section {
-    display: flex;
-    position: absolute;
-    background: white;
-    background: linear-gradient(
-        to right bottom, 
-        rgba(16, 217, 224, 0.4), 
-        rgba(16, 179, 255, 0.2)
-        );
-    border-radius: 2rem;
-    backdrop-filter: blur(30rem);
-    border: 2px solid;
-    border-color: black;
-}
-/* Complete Don't Touch*/
-.learning_material_module{
-    background: none;
-        border: none;
-        border-color: none;
-        margin: 0.5rem 0rem;
-        border-radius: 1rem;
-}
-/* Complete Don't Touch*/
-.learning_material_header{
-    white-space: nowrap;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.material_selection{
-    position: absolute;
-    height: 31.8rem;
-    width:4.9rem;
-    border: 2px solid;
-    border-color: black;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    margin-left: 48.5rem;
-    padding: 0rem 5.5rem 0rem 0rem;
-    margin: 0rem 0rem 0rem 48.2rem; 
-    z-index: 6;
-}
-
-.powerpoint{
-    position: absolute;
-    overflow: hidden;
-    margin: 3.4rem 11rem 0rem 0rem;
-    z-index: 4;
-    border: 1px solid;
-    border-color: black;
-    width: 48.3rem;
-    height: 28.6rem;
-    transform: translateZ(0px);
-    border: 2px solid; 
-    border-color: black;
-    border-bottom-left-radius: 2rem;  
-
-}
-
-/* Complete Don't Touch*/
 /*Desktop 1920px x 1367px*/
-
 @media screen   
 and (max-device-width: 1920px) and (max-device-height: 1080px){
 
-        .learning_material_section {
-            display: flex;
-            position: absolute;
-            width: 54rem;
-            height: 32rem;
-            float:left;
-            margin: 25rem 0rem 0rem 60rem;
-            z-index: 1;
-        }
+.learning_material_section {
+display: flex;
+position: absolute;
+background: white;
+background: linear-gradient(
+to right bottom, 
+rgba(16, 217, 224, 0.4), 
+rgba(16, 179, 255, 0.2)
+);
+border-radius: 2rem;
+backdrop-filter: blur(30rem);
+border: 2px solid;
+border-color: black;
+width: 54rem;
+height: 32rem;
+float:left;
+margin: 25rem 0rem 0rem 60rem;
+z-index: 1;
+}
 
-        .learning_material_module{
-            padding: 1rem 0rem 0rem 1rem;
-            width: 100rem;
-            height: 10rem;
-        }
+.learning_material_module{
+background: none;
+border: none;
+border-color: none;
+margin: 0.5rem 0rem;
+border-radius: 1rem;
+padding: 1rem 0rem 0rem 1rem;
+width: 100rem;
+height: 10rem;
+}
 
-        .learning_material_header{
-            white-space: nowrap;
-            padding: 1.5rem 0rem 1.2rem 17rem;
-            bottom: 1rem;
-            font-size: 1rem;
-        }
+.learning_material_header{
+white-space: nowrap;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 1.5rem 0rem 1.2rem 17rem;
+bottom: 1rem;
+font-size: 1rem;
+}
 
-        .learning_material{
-            padding: 1rem 0rem 1rem 0.1rem;
-            margin: 0.8rem 0rem 0rem 3rem;
-            font-size: 0.6rem;
-            word-wrap: break-all;
-            width: 22rem;
-            text-align: left;
-        }
-
-       
+.learning_material{
+padding: 1rem 0rem 1rem 0.1rem;
+margin: 0.8rem 0rem 0rem 3rem;
+font-size: 0.6rem;
+word-wrap: break-all;
+width: 22rem;
+text-align: left;
+position: absolute;
+height: 31.8rem;
+width:4.9rem;
+border: 2px solid;
+border-color: black;
+border-top-right-radius: 2rem;
+border-bottom-right-radius: 2rem;
+margin-left: 48.5rem;
+padding: 0rem 5.5rem 0rem 0rem;
+margin: 0rem 0rem 0rem 48.2rem; 
+z-index: 6;
+}
+.powerpoint{
+position: absolute;
+overflow: hidden;
+margin: 3.4rem 11rem 0rem 0rem;
+z-index: 4;
+border: 1px solid;
+border-color: black;
+width: 48.3rem;
+height: 28.6rem;
+transform: translateZ(0px);
+border: 2px solid; 
+border-color: black;
+border-bottom-left-radius: 2rem;  
+}
 }                          
