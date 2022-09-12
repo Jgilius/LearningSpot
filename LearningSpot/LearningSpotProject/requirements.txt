@@ -1,0 +1,23 @@
+asgiref==3.5.2
+beautifulsoup4==4.11.1
+certifi @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_83242e7e-f82d-4a71-8ef2-9d71d212d249gu_wxmeq/croots/recipe/certifi_1655968827803/work/certifi
+cffi==1.15.1
+charset-normalizer==2.1.1
+cryptography==37.0.4
+css-parser==1.0.7
+Django==3.2.14
+idna==3.3
+ndg-httpsclient==0.5.1
+Pillow==9.2.0
+pusher==3.2.0
+pyasn1==0.4.8
+pycparser==2.21
+PyNaCl==1.5.0
+pyOpenSSL==22.0.0
+pytz @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_1caf090c-01b6-4973-adac-d2eb884a674e7zonb9eb/croots/recipe/pytz_1654762641285/work
+requests==2.28.1
+six==1.16.0
+soupsieve==2.3.2.post1
+sqlparse==0.4.2
+typing_extensions==4.3.0
+urllib3==1.26.12
