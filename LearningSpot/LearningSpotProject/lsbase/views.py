@@ -17,7 +17,7 @@ def index(request):
     return render(request, 'index.html')
 
 
-
+# user creation view function 'registration page'
 @user_not_authenticated
 def register_page(request):
     form = CreateUser( )
@@ -34,7 +34,7 @@ def register_page(request):
     return render (request, 'register.html', context)
     
 
-
+# user login view function 'login page'
 @user_not_authenticated
 def login_page(request):
     if request.method == 'POST':
@@ -50,13 +50,13 @@ def login_page(request):
     return render (request, 'login.html', context)
 
 
-
+# user logout view function 'login page'
 def user_logout(request):
     logout(request)
     return redirect('login')
 
 
-
+# student function, contest accessing all learning intention and task objects
 @login_required(login_url='login')
 def student(request):
     qs = Learning_Intention.objects.all()
@@ -70,7 +70,9 @@ def student(request):
     return render (request,'student.html', context)
 
 
-
+# teacher function, contest accessing all learning intention and task objects
+# contains post method a handling functionality for learning intention and task creation 
+# context access for all objects associated with learning intention, task and associated forms
 @login_required(login_url='login')
 @teacher_only
 def teacher(request):
@@ -104,16 +106,6 @@ def teacher(request):
 
 
 
-
-
-
-
-
-
-
-
-
-
 def learning_intention_teacher(request):
     qs = Learning_Intention.objects.all()
     context = {
@@ -129,6 +121,8 @@ def learning_intention(request):
     return render (request,'student.html', context)
 
 
+# select function, retreiving learning intention ID, 
+# if user selecting happy is already associated to the learning intention, then upon clicking the button they are removed
 def happy_select(request):
     user = request.user 
     if request.method == 'POST':
@@ -147,8 +141,8 @@ def happy_select(request):
         happy.save()
     return redirect('student')
 
-
-
+# select function, retreiving learning intention ID, 
+# if user selecting happy is already associated to the learning intention, then upon clicking the button they are removed
 def unsure_select(request):
     user = request.user
     if request.method == 'POST':
@@ -168,7 +162,8 @@ def unsure_select(request):
     return redirect('student')
 
 
-
+# select function, retreiving learning intention ID, 
+# if user selecting happy is already associated to the learning intention, then upon clicking the button they are removed
 def sad_select(request):
     user = request.user
     if request.method == 'POST':
@@ -188,7 +183,6 @@ def sad_select(request):
     return redirect('student')
 
 
-
 def learning_task(request):
     lt = Learning_Task.objects.all()
     user = request.user
@@ -198,7 +192,8 @@ def learning_task(request):
         }
     return render (request,'student', context)
 
-
+# select function, retreiving learning task ID, 
+# if user selecting happy is already associated to the learning task, then upon clicking the button they are removed
 def inprogress_select(request):
     user = request.user 
     if request.method == 'POST':
@@ -217,7 +212,8 @@ def inprogress_select(request):
         inprogress.save()
     return redirect('student')
 
-
+# select function, retreiving learning task ID, 
+# if user selecting happy is already associated to the learning task, then upon clicking the button they are removed
 
 def notstarted_select(request):
     user = request.user 
@@ -238,7 +234,8 @@ def notstarted_select(request):
     return redirect('student')
 
 
-
+# select function, retreiving learning task ID, 
+# if user selecting happy is already associated to the learning task, then upon clicking the button they are removed
 def needhelp_select(request):
     user = request.user 
     if request.method == 'POST':
@@ -257,7 +254,8 @@ def needhelp_select(request):
         needhelp.save()
     return redirect('student')
 
-
+# select function, retreiving learning task ID, 
+# if user selecting happy is already associated to the learning task, then upon clicking the button they are removed
 
 def complete_select(request):
     user = request.user 

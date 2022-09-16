@@ -13,12 +13,14 @@ class CreateUser(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2']
 
 
+# form to create Learning Intentions
 class CreateLI(ModelForm):
     class Meta:
         model = Learning_Intention
         fields = ['title']
 
 
+# form to create Learning Task
 class CreateLT(ModelForm):
     class Meta:
         model = Learning_Task

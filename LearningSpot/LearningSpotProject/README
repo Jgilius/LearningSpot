@@ -1,0 +1,14 @@
+Code base for the MSc Software Development Individual Project, The Univeristy of Glasgow. 
+
+LearningSpot is a Django web application for distance learning, intended for use in UK schools.
+
+This is a Django project, therefore in order to run, the following steps are required. 
+
+
+1. Install Python 3.7
+2. Clone Git Repository: https://github.com/Jgilius/LearningSpot
+3. Create Virtual Environment
+4. Activate
+5. Pip Install Django 3.2
+6. Pip Install requirements, use requirements.txt
+7. Migrate Database, python manage.py migrate

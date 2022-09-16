@@ -1,12 +1,15 @@
-// Handle errors.
+// Below code can be found at https://docs.agora.io/en/video-legacy/start_call_web?platform=Web
+// Relevant adjustments have been made to facilitate integration
+
+// error handling
 let handleError = function(err){
     console.log("Error: ", err);
 };
 
-// Query the container to which the remote stream belong.
+// Queries the container to which the remote stream belong.
 let remoteContainer = document.getElementById("remote-container");
 
-// Add video streams to the container.
+// adds video streams to the container.
 function addVideoStream(elementId){
     // Creates a new div for every stream
     let streamDiv = document.createElement("div");
@@ -18,12 +21,13 @@ function addVideoStream(elementId){
     remoteContainer.appendChild(streamDiv);
 };
 
-// Remove the video stream from the container.
+//removes video stream from the container.
 function removeVideoStream(elementId) {
     let remoteDiv = document.getElementById(elementId);
     if (remoteDiv) remoteDiv.parentNode.removeChild(remoteDiv);
 };
 
+// Specifing web rtc connection
 let client = AgoraRTC.createClient({
     mode: "rtc",
     codec: "vp8",
@@ -36,45 +40,33 @@ client.init("4e7bcf7bbff741599b6b82ce27663b2d", function() {
 });
 
 // Join a channel
+// Token  below expires 12/09/22
+// need for automated token generation
+// allows both audio and video on connection
 client.join("007eJxTYBDglrv8/XJqt3AFQ/Um810SJedrTP6FX6v0DpDpv9s2Zb8Cg0mqeVJymnlSUlqauYmhqaVlklmShVFyqpG5mZlxklGKdLRc8qw18smr3+kwMTJAIIjPwpCbmJnHwAAANkMghw==", "main", null, (uid)=>{
     // Create a local stream
     let localStream = AgoraRTC.createStream({
         audio: true,
         video: true,
     });
-    // Initialize the local stream
+    // Initializes the local stream
     localStream.init(()=>{
-        // Play the local stream
+        // Plays the local stream
         localStream.play("zoom_window");
-        // Publish the local stream
+        // Publishes the local stream
         client.publish(localStream, handleError);
     }, handleError);
   }, handleError);
 
-// Subscribe to the remote stream when it is published
+// Subscribes to the remote stream when it is published
 client.on("stream-added", function(evt){
     client.subscribe(evt.stream, handleError);
 });
-// Play the remote stream when it is subsribed
+// Plays the remote stream when it is subsribed
 client.on("stream-subscribed", function(evt){
     let stream = evt.stream;
     let streamId = String(stream.getId());
     addVideoStream(streamId);
     stream.play(streamId);
 });
-
-// // Remove the corresponding view when a remote user unpublishes.
-// client.on("stream-removed", function(evt){
-//     let stream = evt.stream;
-//     let streamId = String(stream.getId());
-//     stream.close();
-//     removeVideoStream(streamId);
-// });
-// // Remove the corresponding view when a remote user leaves the channel.
-// client.on("peer-leave", function(evt){
-//     let stream = evt.stream;
-//     let streamId = String(stream.getId());
-//     stream.close();
-//     removeVideoStream(streamId);
-// });
 
